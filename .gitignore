@@ -23,6 +23,6 @@
 hs_err_pid*
 
 .idea/
-temp/
+src/temp/
 *.iml
 .DS_Store
