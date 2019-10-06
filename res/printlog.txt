@@ -1,0 +1,1384 @@
+2019/10/07 01:04:39
+Content type for https://stuff.tv/ads.txt = text/plain;charset=UTF-8
+2019/10/07 01:06:18
+Connection refused (Connection refused) ->> http://dylanchords.info/ads.txt
+2019/10/07 01:06:28
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 01:06:59
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 01:48:25
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 01:48:29
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 01:48:38
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 01:48:51
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 01:48:51
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 01:48:54
+connect timed out ->> http://dylanchords.info/ads.txt
+2019/10/07 01:48:59
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 01:49:06
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:49:46
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 01:49:50
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 01:49:56
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 01:50:11
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 01:50:11
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 01:50:13
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 01:50:14
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 01:50:14
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:14
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 01:50:14
+www.ephotozine.com ->> http://ephotozine.com/ads.txt
+2019/10/07 01:50:15
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/07 01:50:15
+Content type for https://buycraft.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:16
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 01:50:16
+oxfordlearnersdictionaries.com ->> http://oxfordlearnersdictionaries.com/ads.txt
+2019/10/07 01:50:16
+handshake alert:  unrecognized_name ->> http://economicsonline.co.uk/ads.txt
+2019/10/07 01:50:16
+Content type for https://offertoro.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:17
+Content type for https://totalwomenscycling.com/ads.txt = text/html
+2019/10/07 01:50:17
+Content type for https://timeshighereducation.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:20
+crickethighlights2.com ->> http://crickethighlights2.com/ads.txt
+2019/10/07 01:50:20
+Content type for https://bridesmagazine.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:21
+Content type for https://technologynetworks.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:21
+Content type for https://motherandbaby.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:21
+Content type for https://mind.org.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:21
+Content type for https://blockposters.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:22
+Content type for https://computerworlduk.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:50:22
+Content type for http://spoongraphics.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:23
+Received fatal alert: handshake_failure ->> http://matrixgames.com/ads.txt
+2019/10/07 01:50:23
+Content type for https://topsimilarsites.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:23
+Content type for http://tradecardsonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:24
+Content type for https://coburgbanks.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:24
+Content type for https://teachpe.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:24
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://icaew.com/ads.txt
+2019/10/07 01:50:24
+Content type for https://channelpartnersonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:24
+Content type for https://iannounce.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:25
+Content type for https://3dartistonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:25
+Content type for https://tvguide.co.uk/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:50:25
+Content type for https://skyscanner.com.sg/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:25
+Content type for https://chelseafc.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:26
+Content type for https://v3.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:26
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 01:50:27
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 01:50:28
+Received fatal alert: handshake_failure ->> http://slitherine.com/ads.txt
+2019/10/07 01:50:28
+connect timed out ->> http://e2bn.org/ads.txt
+2019/10/07 01:50:29
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 01:50:29
+Content type for https://scrapmetalforum.com/ads.txt = text/html; charset=ISO-8859-1
+2019/10/07 01:50:30
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 01:50:30
+www.carmagazine.co.uk ->> http://carmagazine.co.uk/ads.txt
+2019/10/07 01:50:30
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 01:50:30
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 01:50:30
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:31
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/07 01:50:32
+Content type for https://lairdtech.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:32
+Content type for http://boohooman.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:50:32
+handshake alert:  unrecognized_name ->> http://economicsonline.co.uk/ads.txt
+2019/10/07 01:50:32
+Received fatal alert: handshake_failure ->> http://lwlies.com/ads.txt
+2019/10/07 01:50:32
+Content type for https://roadcyclinguk.com/ads.txt = text/html
+2019/10/07 01:50:32
+Content type for http://doctorwhonews.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:33
+ftchinese.com ->> http://ftchinese.com/ads.txt
+2019/10/07 01:50:33
+Content type for http://letour.fr/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:34
+Content type for http://gamingcloud.com/ads.txt = text/html
+2019/10/07 01:50:35
+Content type for http://fun-with-words.com/ads.txt = text/html
+2019/10/07 01:50:37
+Content type for https://pap.pl/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:37
+Content type for https://uwe.ac.uk/ads.txt = text/html; charset=iso-8859-1
+2019/10/07 01:50:38
+Content type for http://next.co.uk/ads.txt = text/html
+2019/10/07 01:50:39
+Content type for https://bridesmagazine.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:39
+Content type for https://atgtickets.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:39
+Content type for https://motherandbaby.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:39
+Content type for https://attackmagazine.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:39
+crickethighlights2.com ->> http://crickethighlights2.com/ads.txt
+2019/10/07 01:50:39
+Content type for https://asda.com/ads.txt = text/html
+2019/10/07 01:50:39
+java.lang.IllegalArgumentException: protocol = http host = null ->> http://wow247.co.uk/ads.txt
+2019/10/07 01:50:39
+Content type for https://autotrader.co.za/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:39
+Content type for https://mind.org.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:39
+Content type for https://chelseafc.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:39
+Content type for https://computerworlduk.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:50:39
+Received fatal alert: handshake_failure ->> http://matrixgames.com/ads.txt
+2019/10/07 01:50:40
+Content type for https://blockposters.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:40
+connect timed out ->> http://dylanchords.info/ads.txt
+2019/10/07 01:50:41
+Content type for https://iannounce.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:41
+Content type for https://topsimilarsites.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:42
+Content type for https://teachpe.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:42
+Content type for http://tradecardsonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:42
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://icaew.com/ads.txt
+2019/10/07 01:50:42
+Content type for https://coburgbanks.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:42
+Content type for https://3dartistonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:42
+Content type for https://skyscanner.com.sg/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:42
+Content type for https://tvguide.co.uk/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:50:43
+Content type for https://channelpartnersonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:43
+Content type for https://v3.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:44
+Received fatal alert: handshake_failure ->> http://slitherine.com/ads.txt
+2019/10/07 01:50:44
+Content type for https://scrapmetalforum.com/ads.txt = text/html; charset=ISO-8859-1
+2019/10/07 01:50:45
+connect timed out ->> http://e2bn.org/ads.txt
+2019/10/07 01:50:45
+Content type for https://celticfc.net/ads.txt = text/html
+2019/10/07 01:50:45
+Content type for https://20thcenturyglass.com/ads.txt = text/html
+2019/10/07 01:50:45
+Content type for http://mynewplaidpants.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:45
+Content type for https://barrycarlyon.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:46
+thenational.scot ->> http://thenational.scot/ads.txt
+2019/10/07 01:50:46
+connect timed out ->> http://thomascook.com/ads.txt
+2019/10/07 01:50:46
+java.security.cert.CertificateException: No subject alternative DNS name matching cimaglobal.com found. ->> http://cimaglobal.com/ads.txt
+2019/10/07 01:50:49
+Content type for https://cruise.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:49
+Content type for https://torquecars.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:49
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://toomkygames.com/ads.txt
+2019/10/07 01:50:49
+sewandso.co.uk ->> http://sewandso.co.uk/ads.txt
+2019/10/07 01:50:50
+Content type for http://sportspromedia.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:51
+Content type for https://sindonews.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:51
+Content type for https://sportswallah.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:52
+Content type for http://doctorwhonews.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:52
+Content type for https://stockflare.com/ads.txt = text/html
+2019/10/07 01:50:52
+typeonline.co.uk ->> http://typeonline.co.uk/ads.txt
+2019/10/07 01:50:52
+typeonline.co.uk ->> http://typeonline.co.uk/ads.txt
+2019/10/07 01:50:52
+Content type for https://lairdtech.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:52
+Content type for http://letour.fr/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:50:53
+connect timed out ->> http://macmillandictionaryblog.com/ads.txt
+2019/10/07 01:50:53
+ftchinese.com ->> http://ftchinese.com/ads.txt
+2019/10/07 01:50:53
+Received fatal alert: handshake_failure ->> http://lwlies.com/ads.txt
+2019/10/07 01:50:53
+Content type for http://divemagazine.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:50:54
+Content type for http://gamingcloud.com/ads.txt = text/html
+2019/10/07 01:50:54
+vwaudiforum.co.uk ->> http://vwaudiforum.co.uk/ads.txt
+2019/10/07 01:50:54
+vwaudiforum.co.uk ->> http://vwaudiforum.co.uk/ads.txt
+2019/10/07 01:50:55
+Content type for http://fun-with-words.com/ads.txt = text/html
+2019/10/07 01:50:55
+Content type for https://uwe.ac.uk/ads.txt = text/html; charset=iso-8859-1
+2019/10/07 01:52:51
+hidemyass.com ->> http://hidemyass.com/ads.txt
+2019/10/07 01:52:51
+dragonbyte-tech.com ->> http://dragonbyte-tech.com/ads.txt
+2019/10/07 01:52:51
+ldoceonline.com ->> http://ldoceonline.com/ads.txt
+2019/10/07 01:52:51
+lipsum.com ->> http://lipsum.com/ads.txt
+2019/10/07 01:52:52
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 01:52:52
+londonist.com ->> http://londonist.com/ads.txt
+2019/10/07 01:52:54
+whatcar.com ->> http://whatcar.com/ads.txt
+2019/10/07 01:52:55
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 01:52:55
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 01:52:56
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 01:52:56
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 01:52:57
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:52:57
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/07 01:52:57
+Content type for https://buycraft.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:52:57
+java.security.cert.CertificateException: No subject alternative DNS name matching nst.com.my found. ->> http://nst.com.my/ads.txt
+2019/10/07 01:52:58
+tfl.gov.uk ->> http://tfl.gov.uk/ads.txt
+2019/10/07 01:52:58
+handshake alert:  unrecognized_name ->> http://economicsonline.co.uk/ads.txt
+2019/10/07 01:52:58
+Content type for https://offertoro.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:52:59
+www.carsguide.com.au ->> http://carsguide.com.au/ads.txt
+2019/10/07 01:53:00
+www.irishnews.com ->> http://irishnews.com/ads.txt
+2019/10/07 01:53:00
+Content type for https://timeshighereducation.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:53:02
+crickethighlights2.com ->> http://crickethighlights2.com/ads.txt
+2019/10/07 01:53:02
+Content type for https://motherandbaby.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:53:02
+Content type for https://bridesmagazine.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:53:02
+Content type for https://mind.org.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:53:02
+Content type for https://technologynetworks.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:53:02
+camstudio.org ->> http://camstudio.org/ads.txt
+2019/10/07 01:53:03
+Content type for https://computerworlduk.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:53:03
+Content type for https://blockposters.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:53:03
+Content type for https://chelseafc.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:53:03
+Content type for http://spoongraphics.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:53:04
+Received fatal alert: handshake_failure ->> http://matrixgames.com/ads.txt
+2019/10/07 01:53:05
+Content type for https://coburgbanks.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:53:05
+Content type for https://topsimilarsites.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:53:05
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://icaew.com/ads.txt
+2019/10/07 01:53:05
+Content type for http://tradecardsonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:53:06
+Content type for https://iannounce.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:53:06
+Content type for https://teachpe.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:53:06
+Content type for https://channelpartnersonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:53:06
+Content type for https://tvguide.co.uk/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:53:06
+Content type for https://3dartistonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:53:06
+Content type for https://skyscanner.com.sg/ads.txt = text/html; charset=utf-8
+2019/10/07 01:53:07
+Content type for https://v3.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:53:08
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 01:53:08
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 01:53:09
+Received fatal alert: handshake_failure ->> http://slitherine.com/ads.txt
+2019/10/07 01:53:10
+Content type for https://scrapmetalforum.com/ads.txt = text/html; charset=ISO-8859-1
+2019/10/07 01:53:10
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 01:53:10
+connect timed out ->> http://e2bn.org/ads.txt
+2019/10/07 01:53:11
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 01:53:12
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:53:12
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 01:53:12
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 01:53:13
+Content type for http://doctorwhonews.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:53:13
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/07 01:53:13
+Content type for https://lairdtech.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:53:13
+Received fatal alert: handshake_failure ->> http://lwlies.com/ads.txt
+2019/10/07 01:53:13
+handshake alert:  unrecognized_name ->> http://economicsonline.co.uk/ads.txt
+2019/10/07 01:53:14
+Content type for http://letour.fr/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:56:26
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 01:56:30
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 01:56:37
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 01:58:01
+connect timed out ->> http://dylanchords.info/ads.txt
+2019/10/07 01:58:16
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 01:58:17
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 01:58:20
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 01:58:20
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 01:58:21
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 01:58:22
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 01:58:23
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:24
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/07 01:58:25
+Content type for https://buycraft.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:25
+handshake alert:  unrecognized_name ->> http://economicsonline.co.uk/ads.txt
+2019/10/07 01:58:27
+java.security.cert.CertificateException: No subject alternative DNS name matching nst.com.my found. ->> http://nst.com.my/ads.txt
+2019/10/07 01:58:27
+Content type for https://offertoro.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:30
+Content type for https://timeshighereducation.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:58:30
+Connection refused (Connection refused) ->> http://dylanchords.info/ads.txt
+2019/10/07 01:58:32
+Content type for https://technologynetworks.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:58:34
+Content type for https://motherandbaby.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:58:35
+Content type for https://mind.org.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:58:35
+Content type for https://bridesmagazine.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:35
+Content type for http://spoongraphics.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:35
+Content type for https://blockposters.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:58:35
+crickethighlights2.com ->> http://crickethighlights2.com/ads.txt
+2019/10/07 01:58:36
+Received fatal alert: handshake_failure ->> http://matrixgames.com/ads.txt
+2019/10/07 01:58:36
+Content type for https://computerworlduk.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:58:37
+connect timed out ->> http://e2bn.org/ads.txt
+2019/10/07 01:58:38
+Content type for https://coburgbanks.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:38
+Content type for https://chelseafc.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:58:40
+Content type for https://channelpartnersonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:40
+Content type for https://teachpe.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:41
+Content type for https://topsimilarsites.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:58:41
+Content type for http://tradecardsonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:42
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://icaew.com/ads.txt
+2019/10/07 01:58:42
+Content type for https://iannounce.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:58:42
+Content type for http://boohooman.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:58:43
+Content type for https://3dartistonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:43
+Content type for https://tvguide.co.uk/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:58:44
+Content type for https://skyscanner.com.sg/ads.txt = text/html; charset=utf-8
+2019/10/07 01:58:45
+Content type for https://v3.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:58:46
+Content type for https://scrapmetalforum.com/ads.txt = text/html; charset=ISO-8859-1
+2019/10/07 01:58:47
+Received fatal alert: handshake_failure ->> http://slitherine.com/ads.txt
+2019/10/07 01:58:47
+Connection refused (Connection refused) ->> http://dylanchords.info/ads.txt
+2019/10/07 01:58:47
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 01:58:49
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 01:58:50
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 01:58:52
+Content type for http://next.co.uk/ads.txt = text/html
+2019/10/07 01:58:52
+www.gmx.net ->> http://gmx.net/ads.txt
+2019/10/07 01:58:53
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 01:58:53
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 01:58:55
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 01:58:56
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:56
+Content type for http://doctorwhonews.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:57
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/07 01:58:57
+handshake alert:  unrecognized_name ->> http://economicsonline.co.uk/ads.txt
+2019/10/07 01:58:57
+thenational.scot ->> http://thenational.scot/ads.txt
+2019/10/07 01:58:58
+Content type for https://lairdtech.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:58:58
+Received fatal alert: handshake_failure ->> http://lwlies.com/ads.txt
+2019/10/07 01:58:58
+connect timed out ->> http://thomascook.com/ads.txt
+2019/10/07 01:58:59
+Content type for http://letour.fr/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:01
+ftchinese.com ->> http://ftchinese.com/ads.txt
+2019/10/07 01:59:02
+Content type for http://gamingcloud.com/ads.txt = text/html
+2019/10/07 01:59:03
+Content type for http://fun-with-words.com/ads.txt = text/html
+2019/10/07 01:59:03
+Content type for https://uwe.ac.uk/ads.txt = text/html; charset=iso-8859-1
+2019/10/07 01:59:05
+Content type for https://pap.pl/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:08
+java.lang.IllegalArgumentException: protocol = http host = null ->> http://wow247.co.uk/ads.txt
+2019/10/07 01:59:08
+Content type for https://autotrader.co.za/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:08
+madeformums.com ->> http://madeformums.com/ads.txt
+2019/10/07 01:59:09
+Content type for https://attackmagazine.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:09
+Content type for https://asda.com/ads.txt = text/html
+2019/10/07 01:59:09
+Content type for https://atgtickets.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:10
+typeonline.co.uk ->> http://typeonline.co.uk/ads.txt
+2019/10/07 01:59:10
+connect timed out ->> http://e2bn.org/ads.txt
+2019/10/07 01:59:11
+Content type for https://mind.org.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:11
+Content type for https://motherandbaby.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:11
+Content type for https://bridesmagazine.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:11
+Received fatal alert: handshake_failure ->> http://matrixgames.com/ads.txt
+2019/10/07 01:59:12
+crickethighlights2.com ->> http://crickethighlights2.com/ads.txt
+2019/10/07 01:59:12
+Content type for https://blockposters.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:12
+Content type for https://chelseafc.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:12
+Content type for https://computerworlduk.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:59:14
+vwaudiforum.co.uk ->> http://vwaudiforum.co.uk/ads.txt
+2019/10/07 01:59:14
+Content type for https://coburgbanks.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:14
+Content type for https://channelpartnersonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:15
+Content type for https://teachpe.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:15
+typeonline.co.uk ->> http://typeonline.co.uk/ads.txt
+2019/10/07 01:59:16
+Content type for https://topsimilarsites.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:16
+Content type for http://tradecardsonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:16
+Content type for https://iannounce.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:17
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://icaew.com/ads.txt
+2019/10/07 01:59:17
+Content type for https://3dartistonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:17
+Content type for https://tvguide.co.uk/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:59:17
+Content type for http://fs-uk.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:18
+Content type for https://skyscanner.com.sg/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:18
+vwaudiforum.co.uk ->> http://vwaudiforum.co.uk/ads.txt
+2019/10/07 01:59:19
+Content type for https://v3.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:20
+Received fatal alert: handshake_failure ->> http://slitherine.com/ads.txt
+2019/10/07 01:59:21
+Content type for https://scrapmetalforum.com/ads.txt = text/html; charset=ISO-8859-1
+2019/10/07 01:59:21
+Content type for http://mynewplaidpants.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:21
+connect timed out ->> http://gwr.com/ads.txt
+2019/10/07 01:59:22
+Content type for https://20thcenturyglass.com/ads.txt = text/html
+2019/10/07 01:59:22
+Content type for https://barrycarlyon.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:23
+Content type for https://celticfc.net/ads.txt = text/html
+2019/10/07 01:59:23
+connect timed out ->> http://macmillandictionaryblog.com/ads.txt
+2019/10/07 01:59:24
+java.security.cert.CertificateException: No subject alternative DNS name matching cimaglobal.com found. ->> http://cimaglobal.com/ads.txt
+2019/10/07 01:59:27
+Content type for https://cruise.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:28
+Content type for http://next.co.uk/ads.txt = text/html
+2019/10/07 01:59:29
+Content type for https://torquecars.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:30
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://toomkygames.com/ads.txt
+2019/10/07 01:59:30
+sewandso.co.uk ->> http://sewandso.co.uk/ads.txt
+2019/10/07 01:59:32
+Content type for https://sportswallah.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:33
+Content type for https://sindonews.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:33
+Content type for https://stockflare.com/ads.txt = text/html
+2019/10/07 01:59:34
+connect timed out ->> http://whatusersdo.com/ads.txt
+2019/10/07 01:59:35
+Content type for http://doctorwhonews.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:36
+Content type for http://divemagazine.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:36
+Content type for http://sportspromedia.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:37
+Content type for https://lairdtech.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:37
+Received fatal alert: handshake_failure ->> http://lwlies.com/ads.txt
+2019/10/07 01:59:37
+Content type for http://letour.fr/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:39
+ftchinese.com ->> http://ftchinese.com/ads.txt
+2019/10/07 01:59:40
+Content type for http://gamingcloud.com/ads.txt = text/html
+2019/10/07 01:59:40
+Content type for http://fun-with-words.com/ads.txt = text/html
+2019/10/07 01:59:41
+Content type for http://nowwatchtvlive.co/ads.txt = text/html
+2019/10/07 01:59:41
+Content type for https://uwe.ac.uk/ads.txt = text/html; charset=iso-8859-1
+2019/10/07 01:59:43
+Content type for https://pap.pl/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:45
+Content type for https://asda.com/ads.txt = text/html
+2019/10/07 01:59:45
+Content type for http://istudio.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 01:59:46
+Content type for https://atgtickets.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:46
+java.lang.IllegalArgumentException: protocol = http host = null ->> http://wow247.co.uk/ads.txt
+2019/10/07 01:59:47
+Content type for https://autotrader.co.za/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:47
+Content type for https://attackmagazine.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:49
+ubagroup.com ->> http://ubagroup.com/ads.txt
+2019/10/07 01:59:51
+Content type for https://router-switch.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:51
+Content type for https://rockmywedding.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:51
+Content type for http://fastpiratebay.co.uk/ads.txt = text/html
+2019/10/07 01:59:52
+Content type for https://fitnessuncovered.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:52
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://footballdatabase.eu/ads.txt
+2019/10/07 01:59:53
+Content type for http://reporo.net/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:54
+Content type for http://freeuk.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:54
+Content type for https://fitstream.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:54
+Content type for https://greatgrubclub.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 01:59:54
+roymech.co.uk ->> http://roymech.co.uk/ads.txt
+2019/10/07 01:59:55
+connect timed out ->> http://nmod.co.uk/ads.txt
+2019/10/07 01:59:55
+tamaulipas.gob.mx ->> http://tamaulipas.gob.mx/ads.txt
+2019/10/07 01:59:56
+Content type for http://fs-uk.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:56
+Content type for https://whitelines.com/ads.txt = text/html
+2019/10/07 01:59:56
+footytube.com ->> http://footytube.com/ads.txt
+2019/10/07 01:59:57
+Content type for https://windrawwin.com/ads.txt = text/html
+2019/10/07 01:59:58
+Content type for https://greatitalianchefs.com/ads.txt = text/html; charset=utf-8
+2019/10/07 01:59:59
+Content type for http://ascii.co.uk/ads.txt = text/html
+2019/10/07 01:59:59
+Content type for https://auctionnudge.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:01
+connect timed out ->> http://macmillandictionaryblog.com/ads.txt
+2019/10/07 02:00:03
+Content type for https://bikemagic.com/ads.txt = text/html
+2019/10/07 02:00:03
+www.mjjcommunity.comads.txt ->> http://mjjcommunity.com/ads.txt
+2019/10/07 02:00:03
+Content type for https://mbclub.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:03
+Content type for http://brierieserver.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:04
+Content type for https://bpf.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:06
+Content type for https://bankingtech.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:06
+Content type for https://mktm.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:06
+Content type for https://kingpinmag.com/ads.txt = text/html
+2019/10/07 02:00:06
+Content type for http://comicscube.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:07
+Content type for https://theburningmonk.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:08
+Content type for http://newelectronics.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:09
+Content type for http://timeandzone.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:11
+skem9.co.uk ->> http://skem9.co.uk/ads.txt
+2019/10/07 02:00:11
+Content type for http://twitdoc.com/ads.txt = text/html
+2019/10/07 02:00:12
+Content type for http://jewishhumorcentral.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:13
+connect timed out ->> http://whatusersdo.com/ads.txt
+2019/10/07 02:00:13
+Content type for https://skyscanner.cz/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:14
+Content type for http://allenovery.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:14
+Content type for https://streamwoop.tv/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:15
+lancsngfl.ac.uk ->> http://lancsngfl.ac.uk/ads.txt
+2019/10/07 02:00:15
+Content type for https://thomasheaton.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:16
+Content type for http://mynewplaidpants.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:17
+Content type for https://20thcenturyglass.com/ads.txt = text/html
+2019/10/07 02:00:18
+Content type for https://barrycarlyon.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:18
+Content type for https://celticfc.net/ads.txt = text/html
+2019/10/07 02:00:19
+java.security.cert.CertificateException: No subject alternative DNS name matching cimaglobal.com found. ->> http://cimaglobal.com/ads.txt
+2019/10/07 02:00:20
+www.gc-uswd-alb01-1750741858.us-gov-west-1.elb.amazon.com ->> http://cpaglobal.com/ads.txt
+2019/10/07 02:00:23
+Content type for https://cruise.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:23
+Content type for https://torquecars.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:24
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://toomkygames.com/ads.txt
+2019/10/07 02:00:24
+sewandso.co.uk ->> http://sewandso.co.uk/ads.txt
+2019/10/07 02:00:25
+Content type for http://schoolgirlminx.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:26
+Content type for https://sindonews.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:26
+Content type for https://sportswallah.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:27
+Content type for https://stockflare.com/ads.txt = text/html
+2019/10/07 02:00:28
+Content type for http://sportspromedia.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:29
+Received fatal alert: handshake_failure ->> http://regions-of-france.com/ads.txt
+2019/10/07 02:00:29
+Content type for http://liberallylean.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:30
+Content type for http://divemagazine.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:31
+Content type for http://freecast.pw/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:32
+Content type for http://in-cosmetics.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:32
+how-to-hunt-rabbit.com ->> http://how-to-hunt-rabbit.com/ads.txt
+2019/10/07 02:00:32
+Content type for https://lovetheatre.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:33
+Content type for http://gamer-pics.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:33
+Content type for https://globalfoodbook.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:33
+Content type for http://philosophyofreligion.info/ads.txt = text/html; charset=utf8
+2019/10/07 02:00:35
+Content type for http://nowwatchtvlive.co/ads.txt = text/html
+2019/10/07 02:00:36
+connect timed out ->> http://newsandstar.co.uk/ads.txt
+2019/10/07 02:00:37
+Content type for http://yourvideohost.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:37
+Content type for https://audiobooktreasury.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:37
+Content type for https://army.ca/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:38
+Content type for http://youngmodelsclub.net/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:38
+momondo.fr ->> http://momondo.fr/ads.txt
+2019/10/07 02:00:38
+momondo.se ->> http://momondo.se/ads.txt
+2019/10/07 02:00:39
+Content type for http://istudio.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 02:00:40
+java.security.cert.CertificateException: No subject alternative DNS name matching mouseprice.com found. ->> http://mouseprice.com/ads.txt
+2019/10/07 02:00:40
+bestpartygames.co.uk ->> http://bestpartygames.co.uk/ads.txt
+2019/10/07 02:00:40
+Content type for https://moneyfacts.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:42
+Content type for http://best-book.us/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:42
+Content type for https://calculla.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:44
+ubagroup.com ->> http://ubagroup.com/ads.txt
+2019/10/07 02:00:45
+Content type for https://router-switch.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:46
+Content type for https://rockmywedding.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:46
+Content type for http://fastpiratebay.co.uk/ads.txt = text/html
+2019/10/07 02:00:46
+Content type for https://fitnessuncovered.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:46
+Content type for http://filefacts.net/ads.txt = text/html
+2019/10/07 02:00:47
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://footballdatabase.eu/ads.txt
+2019/10/07 02:00:47
+Content type for https://greatgrubclub.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:48
+Content type for http://reporo.net/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:48
+Content type for https://fitstream.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:48
+Content type for http://freeuk.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:48
+Content type for http://urbansketchers.org/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:49
+Content type for https://greatitalianchefs.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:49
+roymech.co.uk ->> http://roymech.co.uk/ads.txt
+2019/10/07 02:00:50
+connect timed out ->> http://nmod.co.uk/ads.txt
+2019/10/07 02:00:50
+tamaulipas.gob.mx ->> http://tamaulipas.gob.mx/ads.txt
+2019/10/07 02:00:50
+Content type for https://windrawwin.com/ads.txt = text/html
+2019/10/07 02:00:50
+footytube.com ->> http://footytube.com/ads.txt
+2019/10/07 02:00:51
+Content type for http://ascii.co.uk/ads.txt = text/html
+2019/10/07 02:00:51
+Content type for https://auctionnudge.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:52
+Content type for http://airlineroutemaps.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:00:53
+www.mjjcommunity.comads.txt ->> http://mjjcommunity.com/ads.txt
+2019/10/07 02:00:54
+Content type for https://mbclub.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:55
+karoo.net ->> http://karoo.net/ads.txt
+2019/10/07 02:00:56
+www.culture24.org.ukads.txt ->> http://culture24.org.uk/ads.txt
+2019/10/07 02:00:56
+Content type for https://mktm.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:56
+Content type for https://cotswolds.info/ads.txt = text/html
+2019/10/07 02:00:57
+Content type for https://bankingtech.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:57
+Content type for https://natgeotraveller.co.uk/ads.txt = text/html
+2019/10/07 02:00:58
+Content type for http://centerparcs.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:58
+null ->> http://thepodge.co.uk/ads.txt
+2019/10/07 02:00:58
+Content type for http://tabulous.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:59
+Received fatal alert: handshake_failure ->> http://thesysadmins.co.uk/ads.txt
+2019/10/07 02:00:59
+Content type for https://treasurers.org/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:00:59
+Content type for https://omojuwa.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:01:02
+Content type for https://jabbalab.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:01:02
+Content type for https://simplish.org/ads.txt = text/html; charset=utf-8
+2019/10/07 02:01:02
+Content type for http://8bongda.com/ads.txt = text/html
+2019/10/07 02:01:04
+Content type for http://truthinshredding.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:01:04
+Content type for https://sweetcrush.co.uk/ads.txt = text/html
+2019/10/07 02:01:05
+Content type for http://hospitalgames.co.uk/ads.txt = text/html
+2019/10/07 02:01:06
+Content type for https://draftfantasyfootball.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:01:06
+localdatasearch.com ->> http://localdatasearch.com/ads.txt
+2019/10/07 02:01:06
+connect timed out ->> http://eclipse.co.uk/ads.txt
+2019/10/07 02:01:07
+Content type for http://allenovery.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:01:07
+Content type for http://lmschairman.org/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:01:07
+Content type for http://ranchstory.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:01:08
+Content type for https://radicasoftware.com/ads.txt = text/html
+2019/10/07 02:01:10
+Content type for http://brierieserver.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:01:11
+connect timed out ->> http://briefreport.co.uk/ads.txt
+2019/10/07 02:01:11
+Content type for https://bpf.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:01:12
+Content type for http://comicscube.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:01:14
+Content type for http://tomsdog.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:01:14
+Content type for http://newelectronics.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:01:15
+Content type for https://theburningmonk.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:01:15
+Content type for http://onedate.com/ads.txt = text/html
+2019/10/07 02:01:17
+Content type for http://timeandzone.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:01:19
+skem9.co.uk ->> http://skem9.co.uk/ads.txt
+2019/10/07 02:01:19
+Content type for http://jewishhumorcentral.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:01:19
+Content type for http://twitdoc.com/ads.txt = text/html
+2019/10/07 02:01:20
+Content type for https://skyscanner.cz/ads.txt = text/html; charset=utf-8
+2019/10/07 02:01:20
+Content type for http://drwho-online.co.uk/ads.txt = text/html
+2019/10/07 02:01:21
+Content type for https://streamwoop.tv/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:01:21
+Content type for http://londondrum.com/ads.txt = text/html
+2019/10/07 02:01:21
+Content type for https://thomasheaton.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:01:22
+lancsngfl.ac.uk ->> http://lancsngfl.ac.uk/ads.txt
+2019/10/07 02:01:23
+Content type for http://love-melody.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:15:22
+dailypost.co.uk ->> http://dailypost.co.uk/ads.txt
+2019/10/07 02:15:22
+historic-uk.com ->> http://historic-uk.com/ads.txt
+2019/10/07 02:15:22
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 02:15:24
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 02:15:25
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 02:15:26
+whatcar.com ->> http://whatcar.com/ads.txt
+2019/10/07 02:15:27
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 02:15:27
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 02:15:29
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 02:15:30
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:15:30
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/07 02:15:31
+Content type for https://buycraft.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:15:31
+www.careeraddict.com ->> http://careeraddict.com/ads.txt
+2019/10/07 02:15:31
+handshake alert:  unrecognized_name ->> http://economicsonline.co.uk/ads.txt
+2019/10/07 02:15:33
+java.security.cert.CertificateException: No subject alternative DNS name matching nst.com.my found. ->> http://nst.com.my/ads.txt
+2019/10/07 02:15:34
+Content type for https://offertoro.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:15:36
+Content type for https://timeshighereducation.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:15:37
+Content type for https://technologynetworks.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:15:41
+Content type for https://motherandbaby.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:15:41
+Content type for http://spoongraphics.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:15:41
+Content type for https://mind.org.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:15:41
+Received fatal alert: handshake_failure ->> http://matrixgames.com/ads.txt
+2019/10/07 02:15:41
+Content type for https://bridesmagazine.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:15:42
+crickethighlights2.com ->> http://crickethighlights2.com/ads.txt
+2019/10/07 02:15:42
+Content type for https://blockposters.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:15:42
+Content type for https://computerworlduk.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 02:15:44
+connect timed out ->> http://e2bn.org/ads.txt
+2019/10/07 02:15:44
+Content type for https://coburgbanks.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:15:46
+Content type for https://teachpe.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:15:46
+Content type for https://topsimilarsites.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:15:46
+Content type for https://channelpartnersonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:15:46
+Content type for https://chelseafc.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:15:46
+Content type for http://tradecardsonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:15:47
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://icaew.com/ads.txt
+2019/10/07 02:15:47
+Content type for https://iannounce.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:15:48
+Content type for https://3dartistonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:15:48
+Content type for https://tvguide.co.uk/ads.txt = text/html;charset=UTF-8
+2019/10/07 02:15:48
+Content type for http://boohooman.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 02:15:49
+Content type for https://skyscanner.com.sg/ads.txt = text/html; charset=utf-8
+2019/10/07 02:15:50
+Content type for https://v3.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:15:51
+Content type for https://scrapmetalforum.com/ads.txt = text/html; charset=ISO-8859-1
+2019/10/07 02:15:52
+Received fatal alert: handshake_failure ->> http://slitherine.com/ads.txt
+2019/10/07 02:15:53
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 02:15:54
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 02:15:56
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 02:15:57
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 02:15:58
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 02:15:58
+Content type for http://next.co.uk/ads.txt = text/html
+2019/10/07 02:15:59
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 02:16:01
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:02
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/07 02:16:02
+Content type for http://doctorwhonews.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:03
+handshake alert:  unrecognized_name ->> http://economicsonline.co.uk/ads.txt
+2019/10/07 02:16:03
+Content type for https://lairdtech.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:04
+Received fatal alert: handshake_failure ->> http://lwlies.com/ads.txt
+2019/10/07 02:16:04
+thenational.scot ->> http://thenational.scot/ads.txt
+2019/10/07 02:16:04
+Content type for http://letour.fr/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:05
+connect timed out ->> http://thomascook.com/ads.txt
+2019/10/07 02:16:06
+ftchinese.com ->> http://ftchinese.com/ads.txt
+2019/10/07 02:16:06
+Content type for http://gamingcloud.com/ads.txt = text/html
+2019/10/07 02:16:07
+Content type for http://fun-with-words.com/ads.txt = text/html
+2019/10/07 02:16:08
+Content type for https://uwe.ac.uk/ads.txt = text/html; charset=iso-8859-1
+2019/10/07 02:16:09
+Content type for https://pap.pl/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:11
+java.lang.IllegalArgumentException: protocol = http host = null ->> http://wow247.co.uk/ads.txt
+2019/10/07 02:16:15
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 02:16:17
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 02:16:19
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 02:16:19
+www.plantbasednews.org ->> http://plantbasednews.org/ads.txt
+2019/10/07 02:16:20
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 02:16:20
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 02:16:21
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 02:16:22
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:23
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/07 02:16:23
+Content type for https://buycraft.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:24
+handshake alert:  unrecognized_name ->> http://economicsonline.co.uk/ads.txt
+2019/10/07 02:16:25
+java.security.cert.CertificateException: No subject alternative DNS name matching nst.com.my found. ->> http://nst.com.my/ads.txt
+2019/10/07 02:16:26
+Content type for https://offertoro.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:28
+Content type for https://timeshighereducation.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:16:30
+Content type for https://technologynetworks.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:16:31
+Content type for https://motherandbaby.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:16:32
+Content type for https://mind.org.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:16:32
+Content type for http://spoongraphics.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:33
+Content type for https://bridesmagazine.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:33
+crickethighlights2.com ->> http://crickethighlights2.com/ads.txt
+2019/10/07 02:16:33
+Received fatal alert: handshake_failure ->> http://matrixgames.com/ads.txt
+2019/10/07 02:16:33
+Content type for https://blockposters.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:16:34
+Content type for https://chelseafc.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:16:34
+Content type for https://computerworlduk.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 02:16:36
+Content type for https://coburgbanks.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:36
+connect timed out ->> http://e2bn.org/ads.txt
+2019/10/07 02:16:37
+Content type for https://teachpe.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:37
+Content type for https://topsimilarsites.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:16:37
+Content type for https://channelpartnersonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:38
+Content type for http://tradecardsonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:38
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://icaew.com/ads.txt
+2019/10/07 02:16:38
+Content type for https://iannounce.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:16:39
+Content type for https://3dartistonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:40
+Content type for http://boohooman.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 02:16:40
+Content type for https://tvguide.co.uk/ads.txt = text/html;charset=UTF-8
+2019/10/07 02:16:41
+Content type for https://skyscanner.com.sg/ads.txt = text/html; charset=utf-8
+2019/10/07 02:16:41
+Content type for https://v3.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:16:43
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 02:16:43
+Content type for https://scrapmetalforum.com/ads.txt = text/html; charset=ISO-8859-1
+2019/10/07 02:16:44
+Received fatal alert: handshake_failure ->> http://slitherine.com/ads.txt
+2019/10/07 02:16:45
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 02:16:48
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 02:16:48
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 02:16:49
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 02:16:50
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 02:16:50
+Content type for http://next.co.uk/ads.txt = text/html
+2019/10/07 02:16:50
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:52
+Content type for http://doctorwhonews.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:52
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/07 02:16:52
+handshake alert:  unrecognized_name ->> http://economicsonline.co.uk/ads.txt
+2019/10/07 02:16:53
+Content type for https://lairdtech.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:53
+Content type for http://letour.fr/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:16:53
+Received fatal alert: handshake_failure ->> http://lwlies.com/ads.txt
+2019/10/07 02:16:56
+thenational.scot ->> http://thenational.scot/ads.txt
+2019/10/07 02:16:56
+ftchinese.com ->> http://ftchinese.com/ads.txt
+2019/10/07 02:16:56
+connect timed out ->> http://thomascook.com/ads.txt
+2019/10/07 02:16:57
+Content type for http://gamingcloud.com/ads.txt = text/html
+2019/10/07 02:16:57
+Content type for http://fun-with-words.com/ads.txt = text/html
+2019/10/07 02:16:58
+Content type for https://uwe.ac.uk/ads.txt = text/html; charset=iso-8859-1
+2019/10/07 02:16:58
+vwaudiforum.co.uk ->> http://vwaudiforum.co.uk/ads.txt
+2019/10/07 02:17:00
+Content type for https://pap.pl/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:02
+java.lang.IllegalArgumentException: protocol = http host = null ->> http://wow247.co.uk/ads.txt
+2019/10/07 02:17:03
+Content type for https://asda.com/ads.txt = text/html
+2019/10/07 02:17:04
+Content type for https://autotrader.co.za/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:04
+Content type for https://atgtickets.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:04
+Content type for https://attackmagazine.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:05
+Content type for https://motherandbaby.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:05
+connect timed out ->> http://e2bn.org/ads.txt
+2019/10/07 02:17:06
+Content type for https://bridesmagazine.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:06
+Content type for https://mind.org.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:06
+crickethighlights2.com ->> http://crickethighlights2.com/ads.txt
+2019/10/07 02:17:06
+Received fatal alert: handshake_failure ->> http://matrixgames.com/ads.txt
+2019/10/07 02:17:06
+Content type for https://chelseafc.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:06
+Content type for https://blockposters.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:07
+Content type for https://computerworlduk.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 02:17:07
+typeonline.co.uk ->> http://typeonline.co.uk/ads.txt
+2019/10/07 02:17:08
+Content type for https://coburgbanks.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:09
+typeonline.co.uk ->> http://typeonline.co.uk/ads.txt
+2019/10/07 02:17:09
+Content type for https://channelpartnersonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:10
+Content type for https://topsimilarsites.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:10
+Content type for https://iannounce.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:10
+Content type for https://teachpe.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:10
+Content type for http://tradecardsonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:11
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://icaew.com/ads.txt
+2019/10/07 02:17:11
+Content type for https://3dartistonline.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:11
+Content type for https://tvguide.co.uk/ads.txt = text/html;charset=UTF-8
+2019/10/07 02:17:12
+Content type for https://skyscanner.com.sg/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:12
+vwaudiforum.co.uk ->> http://vwaudiforum.co.uk/ads.txt
+2019/10/07 02:17:12
+Content type for http://fs-uk.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:13
+Content type for https://v3.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:14
+Received fatal alert: handshake_failure ->> http://slitherine.com/ads.txt
+2019/10/07 02:17:15
+Content type for https://scrapmetalforum.com/ads.txt = text/html; charset=ISO-8859-1
+2019/10/07 02:17:15
+Content type for http://mynewplaidpants.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:16
+Content type for https://20thcenturyglass.com/ads.txt = text/html
+2019/10/07 02:17:17
+Content type for https://celticfc.net/ads.txt = text/html
+2019/10/07 02:17:17
+Content type for https://barrycarlyon.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:18
+java.security.cert.CertificateException: No subject alternative DNS name matching cimaglobal.com found. ->> http://cimaglobal.com/ads.txt
+2019/10/07 02:17:18
+connect timed out ->> http://macmillandictionaryblog.com/ads.txt
+2019/10/07 02:17:21
+Content type for https://cruise.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:22
+Content type for http://next.co.uk/ads.txt = text/html
+2019/10/07 02:17:22
+Content type for https://torquecars.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:23
+sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target ->> http://toomkygames.com/ads.txt
+2019/10/07 02:17:23
+sewandso.co.uk ->> http://sewandso.co.uk/ads.txt
+2019/10/07 02:17:25
+Content type for https://sportswallah.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:25
+Content type for https://sindonews.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:26
+Content type for https://stockflare.com/ads.txt = text/html
+2019/10/07 02:17:28
+Content type for http://doctorwhonews.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:29
+Content type for http://divemagazine.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:29
+Content type for https://lairdtech.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:29
+Content type for http://sportspromedia.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:29
+connect timed out ->> http://whatusersdo.com/ads.txt
+2019/10/07 02:17:29
+Content type for http://letour.fr/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:30
+Received fatal alert: handshake_failure ->> http://lwlies.com/ads.txt
+2019/10/07 02:17:32
+ftchinese.com ->> http://ftchinese.com/ads.txt
+2019/10/07 02:17:33
+Content type for http://gamingcloud.com/ads.txt = text/html
+2019/10/07 02:17:34
+Content type for https://uwe.ac.uk/ads.txt = text/html; charset=iso-8859-1
+2019/10/07 02:17:34
+Content type for http://fun-with-words.com/ads.txt = text/html
+2019/10/07 02:17:34
+Content type for http://nowwatchtvlive.co/ads.txt = text/html
+2019/10/07 02:17:35
+Content type for https://pap.pl/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:38
+Content type for http://istudio.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 02:17:39
+www.energyjobline.com ->> http://energyjobline.com/ads.txt
+2019/10/07 02:17:39
+java.lang.IllegalArgumentException: protocol = http host = null ->> http://wow247.co.uk/ads.txt
+2019/10/07 02:17:39
+Content type for https://asda.com/ads.txt = text/html
+2019/10/07 02:17:39
+Content type for https://atgtickets.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:39
+Content type for https://autotrader.co.za/ads.txt = text/html; charset=utf-8
+2019/10/07 02:17:39
+Content type for https://attackmagazine.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:17:42
+ubagroup.com ->> http://ubagroup.com/ads.txt
+2019/10/07 02:19:01
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 02:19:01
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 02:19:04
+Content type for https://gumtree.com/ads.txt = text/html
+2019/10/07 02:19:04
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/07 02:19:05
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/07 02:19:05
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:19:05
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/07 02:19:06
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/07 02:19:07
+Content type for https://buycraft.net/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:19:07
+handshake alert:  unrecognized_name ->> http://economicsonline.co.uk/ads.txt
+2019/10/07 02:19:07
+java.security.cert.CertificateException: No subject alternative DNS name matching nst.com.my found. ->> http://nst.com.my/ads.txt
+2019/10/07 02:19:08
+Content type for https://offertoro.com/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:19:10
+Content type for https://timeshighereducation.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:19:12
+Content type for https://technologynetworks.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:19:13
+crickethighlights2.com ->> http://crickethighlights2.com/ads.txt
+2019/10/07 02:19:13
+Content type for https://bridesmagazine.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:19:13
+Content type for https://motherandbaby.co.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:19:14
+Content type for https://mind.org.uk/ads.txt = text/html; charset=utf-8
+2019/10/07 02:19:14
+Content type for https://chelseafc.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:19:14
+Content type for https://blockposters.com/ads.txt = text/html; charset=utf-8
+2019/10/07 02:19:14
+Content type for http://spoongraphics.co.uk/ads.txt = text/html; charset=UTF-8
+2019/10/07 02:19:15
+Content type for https://computerworlduk.com/ads.txt = text/html;charset=UTF-8
+2019/10/07 02:19:15
+Received fatal alert: handshake_failure ->> http://matrixgames.com/ads.txt
+2019/10/07 02:20:44
+stuff.tv ->> http://stuff.tv/ads.txt
+2019/10/07 02:20:44
+historic-uk.com ->> http://historic-uk.com/ads.txt
+2019/10/07 02:20:45
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/07 02:20:46
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/07 02:20:46
+gamesindustry.biz ->> http://gamesindustry.biz/ads.txt
