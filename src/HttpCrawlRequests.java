@@ -26,11 +26,12 @@ public class HttpCrawlRequests {
         }
         catch (Exception e)
         {
+            Logger.error(e);
             return null;
         }
     }
 
-    public static ArrayList<String[]> getDataFromRequest(String url) throws Exception {
+    private static ArrayList<String[]> getDataFromRequest(String url) throws Exception {
 
         try
         {
@@ -76,7 +77,7 @@ public class HttpCrawlRequests {
         }
     }
 
-    public static HttpURLConnection handleRedirects(String url, HttpURLConnection con, int hopCount) throws Exception
+    private static HttpURLConnection handleRedirects(String url, HttpURLConnection con, int hopCount) throws Exception
     {
         String rootDomain =  getRootDomainFromUrl(url);
         String redirectUrl = con.getHeaderField("Location");
@@ -105,7 +106,7 @@ public class HttpCrawlRequests {
         }
     }
 
-    public static HttpURLConnection setupConnection(String url) throws Exception
+    private static HttpURLConnection setupConnection(String url) throws Exception
     {
         URL obj = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
@@ -114,13 +115,12 @@ public class HttpCrawlRequests {
         connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) " +
                 "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36");
         connection.setRequestProperty("Upgrade-Insecure-Requests", "1");
-        Map<?,?> map =connection.getRequestProperties();
         connection.setConnectTimeout(15000);
         return connection;
     }
 
 
-    public static String getRootDomainFromUrl(String url) throws Exception
+    private static String getRootDomainFromUrl(String url) throws Exception
     {
         //extracting rootDomain
         URI uri = new URI(url);
@@ -129,7 +129,7 @@ public class HttpCrawlRequests {
         return rootDomain;
     }
 
-    public static ArrayList<String[]> parseData(HttpURLConnection connection) throws Exception
+    private static ArrayList<String[]> parseData(HttpURLConnection connection) throws Exception
     {
         BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         String inputLine;
@@ -155,7 +155,7 @@ public class HttpCrawlRequests {
     }
 
 
-    public static String[] processLineData(String line) throws RuntimeException
+    private static String[] processLineData(String line) throws RuntimeException
     {
         int commentIndex = line.indexOf("#");
         if(commentIndex != -1)
