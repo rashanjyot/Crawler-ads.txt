@@ -10,19 +10,37 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Crawler {
 
-    Crawler()
+    private static ExecutorService dbPool, httpPool;
+
+    public static Connection setupConnection()
     {
-
-    }
-
-    public void crawlDomain(String domain){
+        try
+        {
+            Class.forName("org.postgresql.Driver");
+            Connection c = DriverManager
+                    .getConnection("jdbc:postgresql://localhost:5432/crawlerDb",
+                            "postgres", "12345");
+            return c;
+        }
+        catch (Exception e)
+        {
+            return null;
+        }
     }
 
     public static void main(String args[])
     {
+        dbPool = Executors.newFixedThreadPool(80);
+        httpPool = Executors.newFixedThreadPool(80);
+        Connection c1 = setupConnection();
+        Connection c2 = setupConnection();
+        Connection c3 = setupConnection();
+
         BufferedReader reader;
         try {
             int count = 0;
@@ -34,23 +52,33 @@ public class Crawler {
 
                 // main logic
                 String domain = line.trim();
-                ArrayList<String[]> recordList = HttpCrawlRequests.getAdsTxtRecords(domain);
-                if(recordList != null){
-                    try
-                    {
-                        Integer websiteId = saveAndFetchDomainId(domain);
-                        HashMap<String, Integer> advertiserNameIdMap = saveAndFetchAdvertiserIds(recordList);
-                        saveRecords(websiteId, advertiserNameIdMap, recordList);
-                        System.out.println("Saved for: " + domain);
+                httpPool.execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        ArrayList<String[]> recordList = HttpCrawlRequests.getAdsTxtRecords(domain);
+                        if(recordList != null){
+                            dbPool.execute(new Runnable() {
+                                @Override
+                                public void run() {
+                                    try
+                                    {
+                                        Integer websiteId = saveAndFetchDomainId(c1, domain);
+                                        HashMap<String, Integer> advertiserNameIdMap = saveAndFetchAdvertiserIds(c2, recordList);
+                                        saveRecords(c3, websiteId, advertiserNameIdMap, recordList);
+                                        System.out.println("Saved for: " + domain);
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        e.printStackTrace();
+                                        Logger.error(e);
+                                        System.out.println("Couldn't save for: " + domain);
+                                    }
+                                }
+                            });
+                        }
                     }
-                    catch (Exception e)
-                    {
-                        e.printStackTrace();
-                        Logger.error(e);
-                        System.out.println("Couldn't save for: " + domain);
-                    }
+                });
 
-                }
                 // read next line
                 line = reader.readLine();
             }
@@ -60,17 +88,15 @@ public class Crawler {
         }
     }
 
-    public static int saveAndFetchDomainId(@NotNull String domain) throws Exception
+    public static synchronized int saveAndFetchDomainId(Connection c, @NotNull String domain) throws Exception
     {
-        Connection c = null;
         Statement stmt = null;
         try
         {
-            Class.forName("org.postgresql.Driver");
-            c = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/crawlerDb",
-                            "postgres", "12345");
-
+            if(c==null || c.isClosed())
+            {
+                c = setupConnection();
+            }
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery("INSERT INTO website (name) VALUES ('" + domain + "')  on conflict (name) do nothing returning website_id;");
             int websiteId;
@@ -91,29 +117,23 @@ public class Crawler {
 
             rs.close();
             stmt.close();
-            c.close();
-
             return websiteId;
         }
         catch (Exception e)
         {
-            c.close();
             throw e;
         }
     }
 
-    public static HashMap<String,Integer> saveAndFetchAdvertiserIds(@NotNull ArrayList<String[]> recordList) throws Exception
+    public static synchronized HashMap<String,Integer> saveAndFetchAdvertiserIds(Connection c, @NotNull ArrayList<String[]> recordList) throws Exception
     {
-        Connection c = null;
         Statement stmt = null;
         try
         {
-            Class.forName("org.postgresql.Driver");
-            c = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/crawlerDb",
-                            "postgres", "12345");
-
-
+            if(c==null || c.isClosed())
+            {
+                c = setupConnection();
+            }
             String insertValues = "";
             String queryValues = "";
             for(String[] record: recordList)
@@ -148,28 +168,25 @@ public class Crawler {
 
             rs.close();
             stmt.close();
-            c.close();
             return advertiserNameIdMap;
         }
         catch (Exception e)
         {
-            c.close();
             throw e;
         }
     }
 
-    public static void saveRecords(@NotNull Integer websiteId, @NotNull HashMap<String,
+    public static synchronized void saveRecords(Connection c, @NotNull Integer websiteId, @NotNull HashMap<String,
             Integer> advertiserNameIdMap, @NotNull ArrayList<String[]> recordList) throws Exception
     {
-        Connection c = null;
-        Class.forName("org.postgresql.Driver");
         try
         {
-            c = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/crawlerDb",
-                            "postgres", "12345");
-
+            if(c==null || c.isClosed())
+            {
+                c = setupConnection();
+            }
             c.setAutoCommit(false);
+
             String insertValues = "";
             for(Integer advertiserId: advertiserNameIdMap.values())
             {
@@ -179,7 +196,7 @@ public class Crawler {
 
             /**
              * TRANSACTION
-             * 0. delete where website_id =
+             * 0. delete where website_id matches (this also deletes from publisher [cascaded])
              * 1. save to website_advertiser_relation
              * 2. save to publisher
              * 3. update last_crawled_at of website
@@ -222,7 +239,6 @@ public class Crawler {
             updateLastCrawledAt.execute("UPDATE website set last_crawled_at= now() where website_id=" + websiteId + ";");
             updateLastCrawledAt.close();
             c.commit();
-            c.close();
         }
         catch (Exception e)
         {
