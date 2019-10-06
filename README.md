@@ -47,7 +47,7 @@ CREATE TABLE website(<br>
 CREATE TABLE advertiser(<br>
     advertiser_id SERIAL PRIMARY KEY,<br>
     name varchar(100) UNIQUE NOT NULL,<br>
-    tag varchar(100)<br>
+    tag varchar(100)  //I think this should be unique too, but wasn't sure of the same!<br>
 );<br>
 <br>
 CREATE TABLE website_advertiser_relation(<br>
