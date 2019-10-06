@@ -29,10 +29,34 @@ CREATE TABLE publisher(
 );
 
 
---Indexes
+--Indexes (Explicitly created ones)
 
-CREATE INDEX ON advertiser (website_id);
+CREATE INDEX ON website_advertiser_relation (website_id);
+
+CREATE INDEX ON website_advertiser_relation (advertiser_id);
+
+CREATE INDEX ON publisher (account_id);
 
 
 
+--Queries
 
+// List of unique advertisers on a website.
+Select name from advertiser where advertiser_id IN
+(Select advertiser_id from website_advertiser_relation where website_id =
+(Select website_id from website where name='steadyhealth.com' limit 1));
+
+
+// List of websites that contain a given advertiser.
+Select name from website where website_id IN
+(Select website_id from website_advertiser_relation where advertiser_id =
+(Select advertiser_id from advertiser where name='google.com' limit 1));
+
+
+// List of websites that contain a given advertiser id.
+Select name from website where website_id IN
+(Select website_id from publisher where account_id = 'pub-2051007210431666');
+
+
+// List of all unique advertisers.
+Select name from advertiser;

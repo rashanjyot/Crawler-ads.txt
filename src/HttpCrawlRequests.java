@@ -170,7 +170,12 @@ public class HttpCrawlRequests {
             throw new RuntimeException("Field count inappropriate-> " + line);
         }
 
-        fields[0] = fields[0].toLowerCase();
+        fields[0] = fields[0].toLowerCase().trim();
+        fields[1] = fields[1].trim();
+        if(fields.length==4)
+        {
+            fields[3] = fields[3].trim();
+        }
 
         if(!(Pattern.matches("(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]", fields[0])))
         {
