@@ -36,32 +36,36 @@ public class Crawler {
                 String domain = line.trim();
                 ArrayList<String[]> recordList = HttpCrawlRequests.getAdsTxtRecords(domain);
                 if(recordList != null){
-                    Integer websiteId = saveAndFetchDomainId(domain);
-                    HashMap<String, Integer> advertiserNameIdMap = saveAndFetchAdvertiserIds(recordList);
-                    boolean saved = saveRecords(websiteId, advertiserNameIdMap, recordList);
-                    if(saved)
+                    try
                     {
+                        Integer websiteId = saveAndFetchDomainId(domain);
+                        HashMap<String, Integer> advertiserNameIdMap = saveAndFetchAdvertiserIds(recordList);
+                        saveRecords(websiteId, advertiserNameIdMap, recordList);
                         System.out.println("Saved for: " + domain);
                     }
-                    else
+                    catch (Exception e)
                     {
+                        e.printStackTrace();
+                        Logger.error(e);
                         System.out.println("Couldn't save for: " + domain);
                     }
+
                 }
                 // read next line
                 line = reader.readLine();
             }
             reader.close();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static int saveAndFetchDomainId(@NotNull String domain)
+    public static int saveAndFetchDomainId(@NotNull String domain) throws Exception
     {
         Connection c = null;
         Statement stmt = null;
-        try {
+        try
+        {
             Class.forName("org.postgresql.Driver");
             c = DriverManager
                     .getConnection("jdbc:postgresql://localhost:5432/crawlerDb",
@@ -76,10 +80,10 @@ public class Crawler {
             }
             catch (Exception e)
             {
-               //exception is raised when conflict happens, run manual select wquery for that
-               stmt = c.createStatement();
-               rs = stmt.executeQuery("Select website_id from website where name='" + domain + "';");
-               rs.next();
+                //exception is raised when conflict happens, run manual select wquery for that
+                stmt = c.createStatement();
+                rs = stmt.executeQuery("Select website_id from website where name='" + domain + "';");
+                rs.next();
                 websiteId = rs.getInt("website_id");
             }
 
@@ -90,20 +94,20 @@ public class Crawler {
             c.close();
 
             return websiteId;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            Logger.error(e);
-            System.exit(0);
-            return -1;
+        }
+        catch (Exception e)
+        {
+            c.close();
+            throw e;
         }
     }
 
-    public static HashMap<String,Integer> saveAndFetchAdvertiserIds(@NotNull ArrayList<String[]> recordList)
+    public static HashMap<String,Integer> saveAndFetchAdvertiserIds(@NotNull ArrayList<String[]> recordList) throws Exception
     {
         Connection c = null;
         Statement stmt = null;
-        try {
+        try
+        {
             Class.forName("org.postgresql.Driver");
             c = DriverManager
                     .getConnection("jdbc:postgresql://localhost:5432/crawlerDb",
@@ -145,23 +149,22 @@ public class Crawler {
             rs.close();
             stmt.close();
             c.close();
-
             return advertiserNameIdMap;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            Logger.error(e);
-            System.exit(0);
-            return null;
+        }
+        catch (Exception e)
+        {
+            c.close();
+            throw e;
         }
     }
 
-    public static boolean saveRecords(Integer websiteId, HashMap<String, Integer> advertiserNameIdMap, ArrayList<String[]> recordList)
+    public static void saveRecords(@NotNull Integer websiteId, @NotNull HashMap<String,
+            Integer> advertiserNameIdMap, @NotNull ArrayList<String[]> recordList) throws Exception
     {
-        boolean isSaved = false;
         Connection c = null;
-        try {
-            Class.forName("org.postgresql.Driver");
+        Class.forName("org.postgresql.Driver");
+        try
+        {
             c = DriverManager
                     .getConnection("jdbc:postgresql://localhost:5432/crawlerDb",
                             "postgres", "12345");
@@ -219,16 +222,13 @@ public class Crawler {
             updateLastCrawledAt.execute("UPDATE website set last_crawled_at= now() where website_id=" + websiteId + ";");
             updateLastCrawledAt.close();
             c.commit();
-            isSaved = true;
-
             c.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            Logger.error(e);
         }
-        finally {
-            return isSaved;
+        catch (Exception e)
+        {
+            c.rollback();
+            c.close();
+            throw e;
         }
     }
 
