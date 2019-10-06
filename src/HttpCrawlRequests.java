@@ -5,6 +5,7 @@ import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class HttpCrawlRequests {
 
@@ -45,8 +46,17 @@ public class HttpCrawlRequests {
 
             if(responseCode >= 200 && responseCode < 300)
             {
-                ArrayList<String[]> recordList = parseData(con);
-                return recordList;
+                if(con.getContentType().trim().contains("text/plain"))
+                {
+                    ArrayList<String[]> recordList = parseData(con);
+                    return recordList;
+                }
+                else
+                {
+                    Logger.log("Content type for " + url + " = " + con.getContentType());
+                    return null;
+                }
+
             }
             else if(responseCode >= 400 && responseCode < 600)
             {
@@ -147,14 +157,31 @@ public class HttpCrawlRequests {
         line = line.trim();
         String[] fields = line.split(",");
 
-        if(fields.length == 3 || fields.length == 4)
+        if(!(fields.length == 3 || fields.length == 4))
         {
-            return fields;
+            throw new RuntimeException("Field count inappropriate-> " + line);
+        }
+
+        fields[0] = fields[0].toLowerCase();
+
+        if(!(Pattern.matches("(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]", fields[0])))
+        {
+            throw new RuntimeException("Inappropriate advertiser system name-> " + line);
+        }
+
+        if(fields[2].toUpperCase().contains("DIRECT"))
+        {
+            fields[2] = "DIRECT";
+        }
+        else if(fields[2].toUpperCase().contains("RESELLER"))
+        {
+            fields[2] = "RESELLER";
         }
         else
         {
-            throw new RuntimeException("Record regex failed: " + line);
+            throw new RuntimeException("Inappropriate Seller account type");
         }
+        return fields;
 
     }
 

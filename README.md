@@ -11,7 +11,7 @@ CREATE TABLE website(
 CREATE TABLE advertiser(
     advertiser_id SERIAL PRIMARY KEY,
     name varchar(100) UNIQUE NOT NULL,
-    tag varchar(20)
+    tag varchar(100)
 );
 
 CREATE TABLE website_advertiser_relation(
@@ -24,7 +24,7 @@ CREATE TABLE publisher(
     publisher_id SERIAL PRIMARY KEY,
     website_advertiser_relation_id INTEGER NOT NULL REFERENCES website_advertiser_relation(website_advertiser_relation_id) ON DELETE CASCADE,
     account_id varchar(100) NOT NULL,
-    account_type varchar(100) NOT NULL,
+    account_type varchar(200) NOT NULL,
     UNIQUE (website_advertiser_relation_id, account_id)
 );
 

@@ -27,7 +27,7 @@ public class Crawler {
         try {
             int count = 0;
             reader = new BufferedReader(new FileReader(
-                    "res/domainList2.txt"));
+                    "res/domainList.txt"));
             String line = reader.readLine();
             while (line != null) {
                 count++;
