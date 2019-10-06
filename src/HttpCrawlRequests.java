@@ -46,6 +46,7 @@ public class HttpCrawlRequests {
 
             if(responseCode >= 200 && responseCode < 300)
             {
+                //ignoring all other types for now as it is mentioned in the Ads.txt specification version 1.0.1
                 if(con.getContentType().trim().contains("text/plain"))
                 {
                     ArrayList<String[]> recordList = parseData(con);
@@ -143,7 +144,14 @@ public class HttpCrawlRequests {
             }
         }
         in.close();
-        return recordList;
+        if(recordList.size()>0)
+        {
+            return recordList;
+        }
+        else
+        {
+            return null;
+        }
     }
 
 
