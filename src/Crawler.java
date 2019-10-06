@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class Crawler {
 
@@ -35,8 +36,8 @@ public class Crawler {
 
     public static void main(String args[])
     {
-        dbPool = Executors.newFixedThreadPool(80);
-        httpPool = Executors.newFixedThreadPool(80);
+        dbPool = Executors.newFixedThreadPool(50);
+        httpPool = Executors.newFixedThreadPool(50);
         Connection c1 = setupConnection();
         Connection c2 = setupConnection();
         Connection c3 = setupConnection();
@@ -45,7 +46,7 @@ public class Crawler {
         try {
             int count = 0;
             reader = new BufferedReader(new FileReader(
-                    "res/domainList.txt"));
+                    "res/domainList2.txt"));
             String line = reader.readLine();
             while (line != null) {
                 count++;
@@ -83,8 +84,19 @@ public class Crawler {
                 line = reader.readLine();
             }
             reader.close();
+            httpPool.shutdown();
+            while (!httpPool.awaitTermination(10, TimeUnit.SECONDS)) {
+                System.out.println("Awaiting completion of http pool.");
+            }
+            dbPool.shutdown();
+            while (!dbPool.awaitTermination(10, TimeUnit.SECONDS)) {
+                System.out.println("Awaiting completion of db pool.");
+            }
+
+            System.out.println("All's well that ends well! ;)");
         } catch (Exception e) {
             e.printStackTrace();
+            Logger.error(e);
         }
     }
 

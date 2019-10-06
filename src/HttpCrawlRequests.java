@@ -172,6 +172,7 @@ public class HttpCrawlRequests {
 
         fields[0] = fields[0].toLowerCase().trim();
         fields[1] = fields[1].trim();
+        fields[2] = fields[2].trim().toUpperCase();
         if(fields.length==4)
         {
             fields[3] = fields[3].trim();
@@ -182,15 +183,7 @@ public class HttpCrawlRequests {
             throw new RuntimeException("Inappropriate advertiser system name-> " + line);
         }
 
-        if(fields[2].toUpperCase().contains("DIRECT"))
-        {
-            fields[2] = "DIRECT";
-        }
-        else if(fields[2].toUpperCase().contains("RESELLER"))
-        {
-            fields[2] = "RESELLER";
-        }
-        else
+        if(!(fields[2].equals("DIRECT") || fields[2].equals("RESELLER")))
         {
             throw new RuntimeException("Inappropriate Seller account type");
         }
