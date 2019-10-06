@@ -1,11 +1,10 @@
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Logger {
-    public static synchronized void log(String content) throws IOException
+    public static synchronized void log(String content)
     {
         try
         {
@@ -25,7 +24,7 @@ public class Logger {
 
     }
 
-    public static synchronized void error(Exception e) throws IOException
+    public static synchronized void error(Exception e)
     {
         try
         {

@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class HttpCrawlRequests {
 
-    public static void getAdsTxtForDomain(String domain)
+    public static ArrayList<String[]> getAdsTxtRecords(String domain)
     {
         try
         {
@@ -21,10 +21,11 @@ public class HttpCrawlRequests {
             {
                 System.out.println(domain + " count: 0");
             }
+            return recordList;
         }
         catch (Exception e)
         {
-
+            return null;
         }
     }
 
@@ -59,7 +60,7 @@ public class HttpCrawlRequests {
             {
                 return getDataFromRequest(url.replaceFirst("https","http"));
             }
-            Logger.error(e);
+            Logger.log(e.getMessage()+ " ->> " + url);
             return null;
         }
     }
@@ -99,7 +100,8 @@ public class HttpCrawlRequests {
         HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
         connection.setInstanceFollowRedirects(true);
         connection.setRequestMethod("GET");
-        connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36");
+        connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) " +
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36");
         connection.setRequestProperty("Upgrade-Insecure-Requests", "1");
         Map<?,?> map =connection.getRequestProperties();
         connection.setConnectTimeout(15000);
