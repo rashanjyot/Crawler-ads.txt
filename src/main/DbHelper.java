@@ -1,30 +1,53 @@
-import com.sun.istack.internal.NotNull;
-import sun.rmi.runtime.Log;
+package main;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import com.sun.istack.internal.NotNull;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
-public class Crawler {
+import static main.Setup.*;
 
-    private static ExecutorService dbPool, httpPool;
+public class DbHelper {
 
-    public static Connection setupConnection()
+    private static int successCount = 0, failureCount = 0;
+
+    private static Connection c1, c2, c3;
+
+    public static void init()
+    {
+        c1 = setupConnection();
+        c2 = setupConnection();
+        c3 = setupConnection();
+    }
+
+    public static void save(String domain, ArrayList<String[]> recordList)
     {
         try
         {
-            Class.forName("org.postgresql.Driver");
+            Integer websiteId = saveAndFetchDomainId(c1, domain);
+            HashMap<String, Integer> advertiserNameIdMap = saveAndFetchAdvertiserIds(c2, recordList);
+            saveRecords(c3, websiteId, advertiserNameIdMap, recordList);
+            System.out.println("Saved for: " + domain);
+            Logger.successLog(++successCount, domain, recordList.size());
+        }
+        catch (Exception e)
+        {
+            Logger.failureLog(++failureCount, domain);
+            System.out.println("Couldn't save for: " + domain);
+        }
+    }
+
+    private static Connection setupConnection()
+    {
+        try
+        {
+            Class.forName(DB_DRIVER_CLASS);
             Connection c = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/crawlerDb",
-                            "postgres", "12345");
+                    .getConnection(DB_URL, DB_USER, DB_PASSWORD);
             return c;
         }
         catch (Exception e)
@@ -33,62 +56,7 @@ public class Crawler {
         }
     }
 
-    public static void main(String args[])
-    {
-        dbPool = Executors.newFixedThreadPool(80);
-        httpPool = Executors.newFixedThreadPool(80);
-        Connection c1 = setupConnection();
-        Connection c2 = setupConnection();
-        Connection c3 = setupConnection();
-
-        BufferedReader reader;
-        try {
-            int count = 0;
-            reader = new BufferedReader(new FileReader(
-                    "res/domainList.txt"));
-            String line = reader.readLine();
-            while (line != null) {
-                count++;
-
-                // main logic
-                String domain = line.trim();
-                httpPool.execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        ArrayList<String[]> recordList = HttpCrawlRequests.getAdsTxtRecords(domain);
-                        if(recordList != null){
-                            dbPool.execute(new Runnable() {
-                                @Override
-                                public void run() {
-                                    try
-                                    {
-                                        Integer websiteId = saveAndFetchDomainId(c1, domain);
-                                        HashMap<String, Integer> advertiserNameIdMap = saveAndFetchAdvertiserIds(c2, recordList);
-                                        saveRecords(c3, websiteId, advertiserNameIdMap, recordList);
-                                        System.out.println("Saved for: " + domain);
-                                    }
-                                    catch (Exception e)
-                                    {
-                                        e.printStackTrace();
-                                        Logger.error(e);
-                                        System.out.println("Couldn't save for: " + domain);
-                                    }
-                                }
-                            });
-                        }
-                    }
-                });
-
-                // read next line
-                line = reader.readLine();
-            }
-            reader.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static synchronized int saveAndFetchDomainId(Connection c, @NotNull String domain) throws Exception
+    private static synchronized int saveAndFetchDomainId(Connection c, @NotNull String domain) throws Exception
     {
         Statement stmt = null;
         try
@@ -113,8 +81,6 @@ public class Crawler {
                 websiteId = rs.getInt("website_id");
             }
 
-            System.out.println(websiteId);
-
             rs.close();
             stmt.close();
             return websiteId;
@@ -125,7 +91,7 @@ public class Crawler {
         }
     }
 
-    public static synchronized HashMap<String,Integer> saveAndFetchAdvertiserIds(Connection c, @NotNull ArrayList<String[]> recordList) throws Exception
+    private static synchronized HashMap<String,Integer> saveAndFetchAdvertiserIds(Connection c, @NotNull ArrayList<String[]> recordList) throws Exception
     {
         Statement stmt = null;
         try
@@ -176,7 +142,7 @@ public class Crawler {
         }
     }
 
-    public static synchronized void saveRecords(Connection c, @NotNull Integer websiteId, @NotNull HashMap<String,
+    private static synchronized void saveRecords(Connection c, @NotNull Integer websiteId, @NotNull HashMap<String,
             Integer> advertiserNameIdMap, @NotNull ArrayList<String[]> recordList) throws Exception
     {
         try
@@ -246,6 +212,12 @@ public class Crawler {
             c.close();
             throw e;
         }
+    }
+
+
+    public static void close()
+    {
+        Logger.logCount(successCount, failureCount);
     }
 
 }

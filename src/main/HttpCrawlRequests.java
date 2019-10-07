@@ -1,10 +1,11 @@
+package main;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.regex.Pattern;
 
 public class HttpCrawlRequests {
@@ -26,11 +27,12 @@ public class HttpCrawlRequests {
         }
         catch (Exception e)
         {
+            Logger.error(e);
             return null;
         }
     }
 
-    public static ArrayList<String[]> getDataFromRequest(String url) throws Exception {
+    private static ArrayList<String[]> getDataFromRequest(String url) throws Exception {
 
         try
         {
@@ -76,7 +78,7 @@ public class HttpCrawlRequests {
         }
     }
 
-    public static HttpURLConnection handleRedirects(String url, HttpURLConnection con, int hopCount) throws Exception
+    private static HttpURLConnection handleRedirects(String url, HttpURLConnection con, int hopCount) throws Exception
     {
         String rootDomain =  getRootDomainFromUrl(url);
         String redirectUrl = con.getHeaderField("Location");
@@ -105,7 +107,7 @@ public class HttpCrawlRequests {
         }
     }
 
-    public static HttpURLConnection setupConnection(String url) throws Exception
+    private static HttpURLConnection setupConnection(String url) throws Exception
     {
         URL obj = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
@@ -114,13 +116,12 @@ public class HttpCrawlRequests {
         connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) " +
                 "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36");
         connection.setRequestProperty("Upgrade-Insecure-Requests", "1");
-        Map<?,?> map =connection.getRequestProperties();
         connection.setConnectTimeout(15000);
         return connection;
     }
 
 
-    public static String getRootDomainFromUrl(String url) throws Exception
+    private static String getRootDomainFromUrl(String url) throws Exception
     {
         //extracting rootDomain
         URI uri = new URI(url);
@@ -129,7 +130,7 @@ public class HttpCrawlRequests {
         return rootDomain;
     }
 
-    public static ArrayList<String[]> parseData(HttpURLConnection connection) throws Exception
+    private static ArrayList<String[]> parseData(HttpURLConnection connection) throws Exception
     {
         BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         String inputLine;
@@ -155,7 +156,7 @@ public class HttpCrawlRequests {
     }
 
 
-    public static String[] processLineData(String line) throws RuntimeException
+    private static String[] processLineData(String line) throws RuntimeException
     {
         int commentIndex = line.indexOf("#");
         if(commentIndex != -1)
@@ -170,22 +171,20 @@ public class HttpCrawlRequests {
             throw new RuntimeException("Field count inappropriate-> " + line);
         }
 
-        fields[0] = fields[0].toLowerCase();
+        fields[0] = fields[0].toLowerCase().trim();
+        fields[1] = fields[1].trim();
+        fields[2] = fields[2].trim().toUpperCase();
+        if(fields.length==4)
+        {
+            fields[3] = fields[3].trim();
+        }
 
         if(!(Pattern.matches("(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]", fields[0])))
         {
             throw new RuntimeException("Inappropriate advertiser system name-> " + line);
         }
 
-        if(fields[2].toUpperCase().contains("DIRECT"))
-        {
-            fields[2] = "DIRECT";
-        }
-        else if(fields[2].toUpperCase().contains("RESELLER"))
-        {
-            fields[2] = "RESELLER";
-        }
-        else
+        if(!(fields[2].equals("DIRECT") || fields[2].equals("RESELLER")))
         {
             throw new RuntimeException("Inappropriate Seller account type");
         }
