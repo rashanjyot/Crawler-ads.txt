@@ -1,4 +1,4 @@
-# Crawler ads.txt
+# main.Crawler ads.txt
 
 <b>--Implementation and assumptions
 
@@ -30,9 +30,9 @@ Referring to the Ads.txt specification v1.0.1, certain assumptions have been tak
 3. Postgres driver JAR for JDBC<br>
 
 <b>Process: </b><br>
-1. Configure in Setup.java file, the settings for your db.<br>
+1. Configure in main.Setup.java file, the settings for your db.<br>
 2. Run Init.java file once to create tables and indexes.<br>
-3. Run Crawler.java to start crawling ads.txt files od domains mentioned in <b>res/domainList.txt</b><br>
+3. Run main.Crawler.java to start crawling ads.txt files of domains mentioned in txt file configured in Setup.java variable<b>DOMAIN_LIST_FILE</b><br>
 
 
 

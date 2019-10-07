@@ -1,3 +1,5 @@
+package main;
+
 import com.sun.istack.internal.NotNull;
 
 import java.sql.Connection;
@@ -6,6 +8,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import static main.Setup.*;
 
 public class DbHelper {
 
@@ -41,10 +45,9 @@ public class DbHelper {
     {
         try
         {
-            Class.forName("org.postgresql.Driver");
+            Class.forName(DB_DRIVER_CLASS);
             Connection c = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/crawlerDb",
-                            "postgres", "12345");
+                    .getConnection(DB_URL, DB_USER, DB_PASSWORD);
             return c;
         }
         catch (Exception e)

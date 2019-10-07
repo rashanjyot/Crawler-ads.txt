@@ -1,18 +1,13 @@
-import com.sun.istack.internal.NotNull;
-import sun.rmi.runtime.Log;
+package main;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+
+import static main.Setup.DOMAIN_LIST_FILE;
 
 public class Crawler {
 
@@ -27,7 +22,7 @@ public class Crawler {
 
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("res/domainList.txt"));
+            reader = new BufferedReader(new FileReader(DOMAIN_LIST_FILE));
             String line = reader.readLine();
             while (line != null) {
                 String domain = line.trim();
