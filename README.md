@@ -80,13 +80,13 @@ CREATE INDEX ON publisher (account_id);<br>
 1. List of unique advertisers on a website.<br>
 Select name from advertiser where advertiser_id IN
 (Select advertiser_id from website_advertiser_relation where website_id =
-(Select website_id from website where name='steadyhealth.com' limit 1));
+(Select website_id from website where name='steadyhealth.com'));
 
 
 2. List of websites that contain a given advertiser. <br>
 Select name from website where website_id IN
 (Select website_id from website_advertiser_relation where advertiser_id =
-(Select advertiser_id from advertiser where name='google.com' limit 1));
+(Select advertiser_id from advertiser where name='google.com'));
 
 
 3. List of websites that contain a given advertiser id. <br>
