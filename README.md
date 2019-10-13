@@ -46,30 +46,23 @@ CREATE TABLE website(<br>
 <br>
 CREATE TABLE advertiser(<br>
     advertiser_id SERIAL PRIMARY KEY,<br>
-    name varchar(100) UNIQUE NOT NULL,<br>
-    tag varchar(100)  //I think this should be unique too, but wasn't sure of the same!<br>
-);<br>
-<br>
-CREATE TABLE website_advertiser_relation(<br>
-	website_advertiser_relation_id SERIAL PRIMARY KEY,<br>
-	website_id INTEGER NOT NULL REFERENCES website(website_id) ON DELETE CASCADE,<br>
-	advertiser_id INTEGER NOT NULL REFERENCES advertiser(advertiser_id) ON DELETE CASCADE<br>
+    name varchar(100) UNIQUE NOT NULL<br>
+    //removing tagid as of now<br>
 );<br>
 <br>
 CREATE TABLE publisher(<br>
-    publisher_id SERIAL PRIMARY KEY,<br>
-    website_advertiser_relation_id INTEGER NOT NULL REFERENCES website_advertiser_relation(website_advertiser_relation_id) ON DELETE CASCADE,<br>
+publisher_id SERIAL PRIMARY KEY,<br>
+    website_id INTEGER NOT NULL REFERENCES website(website_id) ON DELETE CASCADE,<br>
+    advertiser_id INTEGER NOT NULL REFERENCES advertiser(advertiser_id) ON DELETE CASCADE,<br>
     account_id varchar(100) NOT NULL,<br>
     account_type varchar(200) NOT NULL,<br>
-    UNIQUE (website_advertiser_relation_id, account_id)<br>
+    UNIQUE (website_id, advertiser_id, account_id)<br>
 );<br>
-
+<br>
 
 <b>--Indexes (Explicitly created ones)</b>
 
-CREATE INDEX ON website_advertiser_relation (website_id);<br>
-
-CREATE INDEX ON website_advertiser_relation (advertiser_id);<br>
+CREATE INDEX ON publisher (advertiser_id);<br>
 
 CREATE INDEX ON publisher (account_id);<br>
 
@@ -78,20 +71,23 @@ CREATE INDEX ON publisher (account_id);<br>
 <b>--Queries</b>
 
 1. List of unique advertisers on a website.<br>
-Select name from advertiser where advertiser_id IN
-(Select advertiser_id from website_advertiser_relation where website_id =
-(Select website_id from website where name='steadyhealth.com'));
+SELECT DISTINCT(advertiser.name) FROM website
+INNER JOIN publisher ON publisher.website_id = website.website_id
+INNER JOIN advertiser ON advertiser.advertiser_id = publisher.advertiser_id
+WHERE website.name = 'steadyhealth.com';
 
 
 2. List of websites that contain a given advertiser. <br>
-Select name from website where website_id IN
-(Select website_id from website_advertiser_relation where advertiser_id =
-(Select advertiser_id from advertiser where name='google.com'));
+SELECT DISTINCT(website.name) FROM advertiser
+INNER JOIN publisher ON advertiser.advertiser_id = publisher.advertiser_id
+INNER JOIN website ON publisher.website_id = website.website_id
+WHERE advertiser.name = 'brightmountainmedia.com';
 
 
 3. List of websites that contain a given advertiser id. <br>
-Select name from website where website_id IN
-(Select website_id from publisher where account_id = 'pub-2051007210431666');
+SELECT DISTINCT(website.name) FROM publisher
+INNER JOIN website ON website.website_id = publisher.website_id
+WHERE publisher.account_id = 'pub-2051007210431666';
 
 
 4. List of all unique advertisers. <br>

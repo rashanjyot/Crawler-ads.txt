@@ -10,15 +10,11 @@ import java.util.concurrent.TimeUnit;
 import static main.Setup.DOMAIN_LIST_FILE;
 
 public class Crawler {
-
-    private static ExecutorService dbPool, httpPool;
+    private static ExecutorService pool;
 
     public static void main(String args[])
     {
-        dbPool = Executors.newFixedThreadPool(50);
-        httpPool = Executors.newFixedThreadPool(50);
-
-        DbHelper.init();
+        pool = Executors.newFixedThreadPool(50);
 
         BufferedReader reader;
         try {
@@ -27,24 +23,18 @@ public class Crawler {
             while (line != null) {
                 String domain = line.trim();
                 /**
-                 * adding domain to httpPool, where a thread will GET data from domain/ads.txt
-                 * If succuessful, it will return a recordList to be stored in db, which is added as a task to dbPool
+                 * Domain is added to pool where each thread makes a HTTP request and then saves to db if ads.txt is fetched
                  *
                  * If dbWrite is successful, domain and recordCount are logged to successLog.txt
                  * else logged to failureLog.txt
                  *
                  * In the end, total count in both the files is logged
                  */
-                httpPool.execute(new Runnable() {
+                pool.execute(new Runnable() {
                     @Override
                     public void run() {
-                        ArrayList<String[]> recordList = HttpCrawlRequests.getAdsTxtRecords(domain);
-                        dbPool.execute(new Runnable() {
-                            @Override
-                            public void run() {
-                                DbHelper.save(domain, recordList);
-                            }
-                        });
+                        ArrayList<String[]> recordList = new HttpCrawlRequests().getAdsTxtRecords(domain);
+                        new DbHelper().save(domain, recordList);
                     }
                 });
 
@@ -52,15 +42,11 @@ public class Crawler {
                 line = reader.readLine();
             }
             reader.close();
-            httpPool.shutdown();
-            while (!httpPool.awaitTermination(10, TimeUnit.SECONDS)) {
-                System.out.println("Awaiting completion of http pool.");
-            }
-            dbPool.shutdown();
-            while (!dbPool.awaitTermination(10, TimeUnit.SECONDS)) {
-                System.out.println("Awaiting completion of db pool.");
-            }
-            DbHelper.close();
+            pool.shutdown();
+            // Long.MAX_VALUE sets for INFINITE WAIT-TIME.
+            // refer https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/package-summary.html and search 'MAX_VALUE'
+            pool.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
+            DbHelper.printFinalCount();
             System.out.println("All's well that ends well! ;)");
         } catch (Exception e) {
             e.printStackTrace();

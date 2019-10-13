@@ -2,10 +2,7 @@ package main;
 
 import com.sun.istack.internal.NotNull;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -15,33 +12,45 @@ public class DbHelper {
 
     private static int successCount = 0, failureCount = 0;
 
-    private static Connection c1, c2, c3;
+    private Connection c;
 
-    public static void init()
+    DbHelper()
     {
-        c1 = setupConnection();
-        c2 = setupConnection();
-        c3 = setupConnection();
+        c = setupConnection();
     }
 
-    public static void save(String domain, ArrayList<String[]> recordList)
+    public synchronized static void incrementSuccessCount()
+    {
+        successCount++;
+    }
+
+    public synchronized static void incrementFailureCount()
+    {
+        failureCount++;
+    }
+
+    public synchronized void save(String domain, ArrayList<String[]> recordList)
     {
         try
         {
-            Integer websiteId = saveAndFetchDomainId(c1, domain);
-            HashMap<String, Integer> advertiserNameIdMap = saveAndFetchAdvertiserIds(c2, recordList);
-            saveRecords(c3, websiteId, advertiserNameIdMap, recordList);
+            if(recordList==null) throw new RuntimeException("Recordlist is null");
+
+            Integer websiteId = saveAndFetchDomainId(c, domain);
+            HashMap<String, Integer> advertiserNameIdMap = saveAndFetchAdvertiserIds(c, recordList);
+            saveRecords(c, websiteId, advertiserNameIdMap, recordList);
+            incrementSuccessCount();
+            Logger.successLog(domain, recordList.size());
             System.out.println("Saved for: " + domain);
-            Logger.successLog(++successCount, domain, recordList.size());
         }
         catch (Exception e)
         {
-            Logger.failureLog(++failureCount, domain);
+            incrementFailureCount();
+            Logger.failureLog(domain);
             System.out.println("Couldn't save for: " + domain);
         }
     }
 
-    private static Connection setupConnection()
+    private synchronized Connection setupConnection()
     {
         try
         {
@@ -56,17 +65,18 @@ public class DbHelper {
         }
     }
 
-    private static synchronized int saveAndFetchDomainId(Connection c, @NotNull String domain) throws Exception
+    private synchronized int saveAndFetchDomainId(Connection c, @NotNull String domain) throws Exception
     {
-        Statement stmt = null;
         try
         {
             if(c==null || c.isClosed())
             {
                 c = setupConnection();
             }
-            stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery("INSERT INTO website (name) VALUES ('" + domain + "')  on conflict (name) do nothing returning website_id;");
+            c.setAutoCommit(true);
+            PreparedStatement ps = c.prepareStatement("INSERT INTO website (name) VALUES (?)  on conflict (name) do nothing returning website_id;");
+            ps.setString(1, domain);
+            ResultSet rs = ps.executeQuery();
             int websiteId;
             try {
                 rs.next();
@@ -75,14 +85,14 @@ public class DbHelper {
             catch (Exception e)
             {
                 //exception is raised when conflict happens, run manual select wquery for that
-                stmt = c.createStatement();
-                rs = stmt.executeQuery("Select website_id from website where name='" + domain + "';");
+                ps = c.prepareStatement("Select website_id from website where name=?;");
+                ps.setString(1, domain);
+                rs = ps.executeQuery();
                 rs.next();
                 websiteId = rs.getInt("website_id");
             }
-
             rs.close();
-            stmt.close();
+            ps.close();
             return websiteId;
         }
         catch (Exception e)
@@ -91,40 +101,30 @@ public class DbHelper {
         }
     }
 
-    private static synchronized HashMap<String,Integer> saveAndFetchAdvertiserIds(Connection c, @NotNull ArrayList<String[]> recordList) throws Exception
+    private synchronized HashMap<String,Integer> saveAndFetchAdvertiserIds(Connection c, @NotNull ArrayList<String[]> recordList) throws Exception
     {
-        Statement stmt = null;
         try
         {
             if(c==null || c.isClosed())
             {
                 c = setupConnection();
             }
-            String insertValues = "";
+            c.setAutoCommit(true);
             String queryValues = "";
+            PreparedStatement ps = c.prepareStatement("INSERT INTO advertiser (name) VALUES (?) on conflict (name) do nothing;");
             for(String[] record: recordList)
             {
-                insertValues += "('" + record[0] + "'";
+                ps.setString(1, record[0]);
+                ps.addBatch();
                 queryValues += "'" + record[0] + "'";
-                if (record.length==4)
-                {
-                    insertValues += ",'" + record[3] + "'";
-                }
-                else
-                {
-                    insertValues += ",null";
-                }
-                insertValues += "),";
                 queryValues += ",";
             }
-            insertValues = insertValues.substring(0, insertValues.length() - 1);
             queryValues = queryValues.substring(0, queryValues.length() - 1);
+            ps.executeBatch();
+            ps.close();
 
-            stmt = c.createStatement();
-            stmt.execute("INSERT INTO advertiser (name, tag) VALUES " + insertValues +"  on conflict (name) do nothing;");
-
-            stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery("Select advertiser_id, name from advertiser where name IN (" + queryValues + " );");
+            ps = c.prepareStatement("Select advertiser_id, name from advertiser where name IN ("+ queryValues +");");
+            ResultSet rs = ps.executeQuery();
             HashMap<String,Integer> advertiserNameIdMap = new HashMap<>();
             while (rs.next()) {
                 int advertiserId = rs.getInt("advertiser_id");
@@ -133,7 +133,7 @@ public class DbHelper {
             }
 
             rs.close();
-            stmt.close();
+            ps.close();
             return advertiserNameIdMap;
         }
         catch (Exception e)
@@ -142,7 +142,7 @@ public class DbHelper {
         }
     }
 
-    private static synchronized void saveRecords(Connection c, @NotNull Integer websiteId, @NotNull HashMap<String,
+    private synchronized void saveRecords(Connection c, @NotNull Integer websiteId, @NotNull HashMap<String,
             Integer> advertiserNameIdMap, @NotNull ArrayList<String[]> recordList) throws Exception
     {
         try
@@ -153,58 +153,39 @@ public class DbHelper {
             }
             c.setAutoCommit(false);
 
-            String insertValues = "";
-            for(Integer advertiserId: advertiserNameIdMap.values())
-            {
-                insertValues += "(" + websiteId + "," + advertiserId + "),";
-            }
-            insertValues = insertValues.substring(0, insertValues.length() - 1);
 
             /**
              * TRANSACTION
-             * 0. delete where website_id matches (this also deletes from publisher [cascaded])
-             * 1. save to website_advertiser_relation
+             * 1. delete from publisher where website_id matches
              * 2. save to publisher
              * 3. update last_crawled_at of website
              */
 
-            Statement deleteWebsiteAdvertiserRelation = c.createStatement();
-            deleteWebsiteAdvertiserRelation.execute("Delete from website_advertiser_relation where website_id=" + websiteId + "");
-            deleteWebsiteAdvertiserRelation.close();
+            PreparedStatement deletePublisherForWebsite = c.prepareStatement("Delete from publisher where website_id = ?;");
+            deletePublisherForWebsite.setInt(1, websiteId);
+            deletePublisherForWebsite.execute();
+            deletePublisherForWebsite.close();
 
-            Statement insertToWebsiteAdvertiserRelation = c.createStatement();
-            insertToWebsiteAdvertiserRelation.execute("INSERT INTO website_advertiser_relation (website_id, advertiser_id) VALUES " + insertValues + " returning website_advertiser_relation_id, advertiser_id;");
-
-            ResultSet insertionResultSet = insertToWebsiteAdvertiserRelation.getResultSet();
-            HashMap<Integer, Integer> advertiserIdRelationMap = new HashMap<>();
-            while(insertionResultSet.next())
-            {
-                int websiteAdvertiserRelationId = insertionResultSet.getInt("website_advertiser_relation_id");
-                int advertiserId = insertionResultSet.getInt("advertiser_id");
-                advertiserIdRelationMap.put(advertiserId, websiteAdvertiserRelationId);
-                // website id is the same only no need to fetch it
-            }
-            insertionResultSet.close();
-            insertToWebsiteAdvertiserRelation.close();
-
-            insertValues = "";
+            PreparedStatement saveToPublisher = c.prepareStatement("INSERT INTO publisher (website_id, advertiser_id, account_id, account_type) VALUES (?,?,?,?) on conflict (website_id, advertiser_id, account_id) do nothing;");
             for(String[] record: recordList)
             {
                 int advId = advertiserNameIdMap.get(record[0]);
-                int relationId = advertiserIdRelationMap.get(advId);
-
-                insertValues += "(" + relationId + ",'" + record[1] + "','" + record[2] + "'),";
+                saveToPublisher.setInt(1, websiteId);
+                saveToPublisher.setInt(2, advId);
+                saveToPublisher.setString(3, record[1]);
+                saveToPublisher.setString(4, record[2]);
+                saveToPublisher.addBatch();
             }
-            insertValues = insertValues.substring(0, insertValues.length() - 1);
-
-            Statement saveToPublisher = c.createStatement();
-            saveToPublisher.execute("INSERT INTO publisher (website_advertiser_relation_id, account_id, account_type) " + "VALUES " + insertValues + " on conflict (website_advertiser_relation_id, account_id) do nothing;");
+            saveToPublisher.executeBatch();
             saveToPublisher.close();
 
-            Statement updateLastCrawledAt = c.createStatement();
-            updateLastCrawledAt.execute("UPDATE website set last_crawled_at= now() where website_id=" + websiteId + ";");
+            PreparedStatement updateLastCrawledAt = c.prepareStatement("UPDATE website set last_crawled_at= now() where website_id = ?;");
+            updateLastCrawledAt.setInt(1, websiteId);
+            updateLastCrawledAt.execute();
             updateLastCrawledAt.close();
+
             c.commit();
+            c.close();
         }
         catch (Exception e)
         {
@@ -215,7 +196,7 @@ public class DbHelper {
     }
 
 
-    public static void close()
+    public static void printFinalCount()
     {
         Logger.logCount(successCount, failureCount);
     }
