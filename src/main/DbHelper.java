@@ -2,10 +2,7 @@ package main;
 
 import com.sun.istack.internal.NotNull;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -70,7 +67,6 @@ public class DbHelper {
 
     private synchronized int saveAndFetchDomainId(Connection c, @NotNull String domain) throws Exception
     {
-        Statement stmt = null;
         try
         {
             if(c==null || c.isClosed())
@@ -78,8 +74,9 @@ public class DbHelper {
                 c = setupConnection();
             }
             c.setAutoCommit(true);
-            stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery("INSERT INTO website (name) VALUES ('" + domain + "')  on conflict (name) do nothing returning website_id;");
+            PreparedStatement ps = c.prepareStatement("INSERT INTO website (name) VALUES (?)  on conflict (name) do nothing returning website_id;");
+            ps.setString(1, domain);
+            ResultSet rs = ps.executeQuery();
             int websiteId;
             try {
                 rs.next();
@@ -88,13 +85,14 @@ public class DbHelper {
             catch (Exception e)
             {
                 //exception is raised when conflict happens, run manual select wquery for that
-                stmt = c.createStatement();
-                rs = stmt.executeQuery("Select website_id from website where name='" + domain + "';");
+                ps = c.prepareStatement("Select website_id from website where name=?;");
+                ps.setString(1, domain);
+                rs = ps.executeQuery();
                 rs.next();
                 websiteId = rs.getInt("website_id");
             }
             rs.close();
-            stmt.close();
+            ps.close();
             return websiteId;
         }
         catch (Exception e)
@@ -105,7 +103,6 @@ public class DbHelper {
 
     private synchronized HashMap<String,Integer> saveAndFetchAdvertiserIds(Connection c, @NotNull ArrayList<String[]> recordList) throws Exception
     {
-        Statement stmt = null;
         try
         {
             if(c==null || c.isClosed())
@@ -113,23 +110,21 @@ public class DbHelper {
                 c = setupConnection();
             }
             c.setAutoCommit(true);
-            String insertValues = "";
             String queryValues = "";
+            PreparedStatement ps = c.prepareStatement("INSERT INTO advertiser (name) VALUES (?) on conflict (name) do nothing;");
             for(String[] record: recordList)
             {
-                insertValues += "('" + record[0] + "'";
+                ps.setString(1, record[0]);
+                ps.addBatch();
                 queryValues += "'" + record[0] + "'";
-                insertValues += "),";
                 queryValues += ",";
             }
-            insertValues = insertValues.substring(0, insertValues.length() - 1);
             queryValues = queryValues.substring(0, queryValues.length() - 1);
+            ps.executeBatch();
+            ps.close();
 
-            stmt = c.createStatement();
-            stmt.execute("INSERT INTO advertiser (name) VALUES " + insertValues +"  on conflict (name) do nothing;");
-
-            stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery("Select advertiser_id, name from advertiser where name IN (" + queryValues + " );");
+            ps = c.prepareStatement("Select advertiser_id, name from advertiser where name IN ("+ queryValues +");");
+            ResultSet rs = ps.executeQuery();
             HashMap<String,Integer> advertiserNameIdMap = new HashMap<>();
             while (rs.next()) {
                 int advertiserId = rs.getInt("advertiser_id");
@@ -138,7 +133,7 @@ public class DbHelper {
             }
 
             rs.close();
-            stmt.close();
+            ps.close();
             return advertiserNameIdMap;
         }
         catch (Exception e)
@@ -166,25 +161,29 @@ public class DbHelper {
              * 3. update last_crawled_at of website
              */
 
-            Statement deletePublisherForWebsite = c.createStatement();
-            deletePublisherForWebsite.execute("Delete from publisher where website_id=" + websiteId + "");
+            PreparedStatement deletePublisherForWebsite = c.prepareStatement("Delete from publisher where website_id = ?;");
+            deletePublisherForWebsite.setInt(1, websiteId);
+            deletePublisherForWebsite.execute();
             deletePublisherForWebsite.close();
 
-            String insertValues = "";
+            PreparedStatement saveToPublisher = c.prepareStatement("INSERT INTO publisher (website_id, advertiser_id, account_id, account_type) VALUES (?,?,?,?) on conflict (website_id, advertiser_id, account_id) do nothing;");
             for(String[] record: recordList)
             {
                 int advId = advertiserNameIdMap.get(record[0]);
-                insertValues += "(" + websiteId + "," + advId + ",'" + record[1] + "','" + record[2] + "'),";
+                saveToPublisher.setInt(1, websiteId);
+                saveToPublisher.setInt(2, advId);
+                saveToPublisher.setString(3, record[1]);
+                saveToPublisher.setString(4, record[2]);
+                saveToPublisher.addBatch();
             }
-            insertValues = insertValues.substring(0, insertValues.length() - 1);
-
-            Statement saveToPublisher = c.createStatement();
-            saveToPublisher.execute("INSERT INTO publisher (website_id, advertiser_id, account_id, account_type) " + "VALUES " + insertValues + " on conflict (website_id, advertiser_id, account_id) do nothing;");
+            saveToPublisher.executeBatch();
             saveToPublisher.close();
 
-            Statement updateLastCrawledAt = c.createStatement();
-            updateLastCrawledAt.execute("UPDATE website set last_crawled_at= now() where website_id=" + websiteId + ";");
+            PreparedStatement updateLastCrawledAt = c.prepareStatement("UPDATE website set last_crawled_at= now() where website_id = ?;");
+            updateLastCrawledAt.setInt(1, websiteId);
+            updateLastCrawledAt.execute();
             updateLastCrawledAt.close();
+
             c.commit();
             c.close();
         }
