@@ -28,6 +28,8 @@ public class Init {
                         " UNIQUE (website_id, advertiser_id, account_id));");
 
                 //Create indexes
+                s.execute("CREATE INDEX ON publisher (advertiser_id);");
+
                 s.execute("CREATE INDEX ON publisher (account_id);");
 
                 connection.commit();
