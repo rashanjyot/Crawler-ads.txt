@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class HttpCrawlRequests {
 
-    public static ArrayList<String[]> getAdsTxtRecords(String domain)
+    public synchronized ArrayList<String[]> getAdsTxtRecords(String domain)
     {
         try
         {
@@ -32,7 +32,7 @@ public class HttpCrawlRequests {
         }
     }
 
-    private static ArrayList<String[]> getDataFromRequest(String url) throws Exception {
+    private synchronized ArrayList<String[]> getDataFromRequest(String url) throws Exception {
 
         try
         {
@@ -78,7 +78,7 @@ public class HttpCrawlRequests {
         }
     }
 
-    private static HttpURLConnection handleRedirects(String url, HttpURLConnection con, int hopCount) throws Exception
+    private synchronized HttpURLConnection handleRedirects(String url, HttpURLConnection con, int hopCount) throws Exception
     {
         String rootDomain =  getRootDomainFromUrl(url);
         String redirectUrl = con.getHeaderField("Location");
@@ -107,7 +107,7 @@ public class HttpCrawlRequests {
         }
     }
 
-    private static HttpURLConnection setupConnection(String url) throws Exception
+    private synchronized HttpURLConnection setupConnection(String url) throws Exception
     {
         URL obj = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
@@ -121,7 +121,7 @@ public class HttpCrawlRequests {
     }
 
 
-    private static String getRootDomainFromUrl(String url) throws Exception
+    private synchronized String getRootDomainFromUrl(String url) throws Exception
     {
         //extracting rootDomain
         URI uri = new URI(url);
@@ -130,7 +130,7 @@ public class HttpCrawlRequests {
         return rootDomain;
     }
 
-    private static ArrayList<String[]> parseData(HttpURLConnection connection) throws Exception
+    private synchronized ArrayList<String[]> parseData(HttpURLConnection connection) throws Exception
     {
         BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         String inputLine;
@@ -156,7 +156,7 @@ public class HttpCrawlRequests {
     }
 
 
-    private static String[] processLineData(String line) throws RuntimeException
+    private synchronized String[] processLineData(String line) throws RuntimeException
     {
         int commentIndex = line.indexOf("#");
         if(commentIndex != -1)

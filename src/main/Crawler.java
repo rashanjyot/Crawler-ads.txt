@@ -35,7 +35,7 @@ public class Crawler {
                 pool.execute(new Runnable() {
                     @Override
                     public void run() {
-                        ArrayList<String[]> recordList = HttpCrawlRequests.getAdsTxtRecords(domain);
+                        ArrayList<String[]> recordList = new HttpCrawlRequests().getAdsTxtRecords(domain);
                         new DbHelper().save(domain, recordList);
                     }
                 });

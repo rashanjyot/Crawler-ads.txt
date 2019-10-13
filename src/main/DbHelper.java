@@ -32,6 +32,12 @@ public class DbHelper {
         failureCount++;
     }
 
+    public synchronized static void printError(Exception e, String domain)
+    {
+        System.err.println(domain);
+        e.printStackTrace();
+    }
+
     public synchronized void save(String domain, ArrayList<String[]> recordList)
     {
         try
@@ -45,13 +51,14 @@ public class DbHelper {
         }
         catch (Exception e)
         {
+            printError(e, domain);
             incrementFailure();
             Logger.failureLog(domain);
             System.out.println("Couldn't save for: " + domain);
         }
     }
 
-    private static Connection setupConnection()
+    private synchronized Connection setupConnection()
     {
         try
         {
