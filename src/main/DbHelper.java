@@ -15,28 +15,38 @@ public class DbHelper {
 
     private static int successCount = 0, failureCount = 0;
 
-    private static Connection c1, c2, c3;
+    private Connection c;
 
-    public static void init()
+    DbHelper()
     {
-        c1 = setupConnection();
-        c2 = setupConnection();
-        c3 = setupConnection();
+        c = setupConnection();
     }
 
-    public static void save(String domain, ArrayList<String[]> recordList)
+    public synchronized static void incrementSuccess()
+    {
+        successCount++;
+    }
+
+    public synchronized static void incrementFailure()
+    {
+        failureCount++;
+    }
+
+    public synchronized void save(String domain, ArrayList<String[]> recordList)
     {
         try
         {
-            Integer websiteId = saveAndFetchDomainId(c1, domain);
-            HashMap<String, Integer> advertiserNameIdMap = saveAndFetchAdvertiserIds(c2, recordList);
-            saveRecords(c3, websiteId, advertiserNameIdMap, recordList);
+            Integer websiteId = saveAndFetchDomainId(c, domain);
+            HashMap<String, Integer> advertiserNameIdMap = saveAndFetchAdvertiserIds(c, recordList);
+            saveRecords(c, websiteId, advertiserNameIdMap, recordList);
+            incrementSuccess();
+            Logger.successLog(domain, recordList.size());
             System.out.println("Saved for: " + domain);
-            Logger.successLog(++successCount, domain, recordList.size());
         }
         catch (Exception e)
         {
-            Logger.failureLog(++failureCount, domain);
+            incrementFailure();
+            Logger.failureLog(domain);
             System.out.println("Couldn't save for: " + domain);
         }
     }
@@ -56,8 +66,9 @@ public class DbHelper {
         }
     }
 
-    private static synchronized int saveAndFetchDomainId(Connection c, @NotNull String domain) throws Exception
+    private synchronized int saveAndFetchDomainId(Connection c, @NotNull String domain) throws Exception
     {
+        Logger.inOutLog("IN: "+Thread.currentThread().getName());
         Statement stmt = null;
         try
         {
@@ -65,6 +76,7 @@ public class DbHelper {
             {
                 c = setupConnection();
             }
+            c.setAutoCommit(true);
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery("INSERT INTO website (name) VALUES ('" + domain + "')  on conflict (name) do nothing returning website_id;");
             int websiteId;
@@ -80,7 +92,7 @@ public class DbHelper {
                 rs.next();
                 websiteId = rs.getInt("website_id");
             }
-
+            Logger.inOutLog("OUT: "+Thread.currentThread().getName());
             rs.close();
             stmt.close();
             return websiteId;
@@ -91,7 +103,7 @@ public class DbHelper {
         }
     }
 
-    private static synchronized HashMap<String,Integer> saveAndFetchAdvertiserIds(Connection c, @NotNull ArrayList<String[]> recordList) throws Exception
+    private synchronized HashMap<String,Integer> saveAndFetchAdvertiserIds(Connection c, @NotNull ArrayList<String[]> recordList) throws Exception
     {
         Statement stmt = null;
         try
@@ -100,6 +112,7 @@ public class DbHelper {
             {
                 c = setupConnection();
             }
+            c.setAutoCommit(true);
             String insertValues = "";
             String queryValues = "";
             for(String[] record: recordList)
@@ -142,7 +155,7 @@ public class DbHelper {
         }
     }
 
-    private static synchronized void saveRecords(Connection c, @NotNull Integer websiteId, @NotNull HashMap<String,
+    private synchronized void saveRecords(Connection c, @NotNull Integer websiteId, @NotNull HashMap<String,
             Integer> advertiserNameIdMap, @NotNull ArrayList<String[]> recordList) throws Exception
     {
         try
@@ -181,6 +194,7 @@ public class DbHelper {
             updateLastCrawledAt.execute("UPDATE website set last_crawled_at= now() where website_id=" + websiteId + ";");
             updateLastCrawledAt.close();
             c.commit();
+            c.close();
         }
         catch (Exception e)
         {
@@ -191,7 +205,7 @@ public class DbHelper {
     }
 
 
-    public static void close()
+    public static void printFinalCount()
     {
         Logger.logCount(successCount, failureCount);
     }

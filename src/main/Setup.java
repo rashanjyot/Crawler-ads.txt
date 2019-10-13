@@ -9,5 +9,5 @@ public class Setup {
     public static final String DB_URL = "jdbc:postgresql://" + DB_HOSTNAME + ":" + DB_PORT + "/" + DB_NAME;
     public static final String DB_DRIVER_CLASS = "org.postgresql.Driver";
 
-    public static final String DOMAIN_LIST_FILE = "res/domainList.txt";
+    public static final String DOMAIN_LIST_FILE = "res/domainList2.txt";
 }

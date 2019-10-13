@@ -1,0 +1,95 @@
+2019/10/14 00:04:26
+pcreview.co.uk ->> http://pcreview.co.uk/ads.txt
+2019/10/14 00:04:26
+ldoceonline.com ->> http://ldoceonline.com/ads.txt
+2019/10/14 00:04:27
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/14 00:04:27
+fourfourtwo.com ->> http://fourfourtwo.com/ads.txt
+2019/10/14 00:04:27
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/14 00:04:28
+www.fashionbeans.com ->> http://fashionbeans.com/ads.txt
+2019/10/14 00:04:28
+animalcorner.co.uk ->> http://animalcorner.co.uk/ads.txt
+2019/10/14 00:04:29
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/14 00:04:29
+www.whathifi.com ->> http://whathifi.com/ads.txt
+2019/10/14 00:04:30
+www.pro-tools-expert.com ->> http://pro-tools-expert.com/ads.txt
+2019/10/14 00:04:30
+www.autosport.com ->> http://autosport.com/ads.txt
+2019/10/14 00:04:30
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/14 00:04:30
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/14 00:04:30
+Content type for https://which.co.uk/ads.txt = text/html
+
+
+
+2019/10/14 00:04:31
+Content type for https://buycraft.net/ads.txt = text/html; charset=UTF-8
+2019/10/14 00:04:32
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/14 00:04:44
+connect timed out ->> http://e2bn.org/ads.txt
+2019/10/14 00:04:48
+Content type for http://boohooman.com/ads.txt = text/html;charset=UTF-8
+2019/10/14 00:05:16
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/14 00:05:17
+www.gamesindustry.biz ->> http://gamesindustry.biz/ads.txt
+2019/10/14 00:05:17
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/14 00:05:17
+ybw.com ->> http://ybw.com/ads.txt
+2019/10/14 00:05:18
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/14 00:05:19
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/14 00:05:20
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/14 00:05:20
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/14 00:05:20
+Content type for https://buycraft.net/ads.txt = text/html; charset=UTF-8
+2019/10/14 00:05:21
+Server redirected too many  times (20) ->> http://hitched.co.uk/ads.txt
+2019/10/14 00:05:33
+connect timed out ->> http://e2bn.org/ads.txt
+2019/10/14 00:05:35
+Content type for http://boohooman.com/ads.txt = text/html;charset=UTF-8
+2019/10/14 00:08:59
+hitched.co.uk ->> http://hitched.co.uk/ads.txt
+2019/10/14 00:08:59
+historyextra.com ->> http://historyextra.com/ads.txt
+2019/10/14 00:08:59
+homeaway.co.uk ->> http://homeaway.co.uk/ads.txt
+2019/10/14 00:08:59
+flyawaysimulation.com ->> http://flyawaysimulation.com/ads.txt
+2019/10/14 00:08:59
+Content type for http://uploadfiles.io/ads.txt = text/html
+2019/10/14 00:08:59
+Content type for http://hidemyass.com/ads.txt = text/html
+2019/10/14 00:09:00
+www.horseandhound.co.uk ->> http://horseandhound.co.uk/ads.txt
+2019/10/14 00:09:00
+www.decanter.com ->> http://decanter.com/ads.txt
+2019/10/14 00:09:00
+worldtravelguide.net ->> http://worldtravelguide.net/ads.txt
+2019/10/14 00:09:01
+Content type for https://pcsx2.net/ads.txt = text/html
+2019/10/14 00:09:01
+bikeradar.com ->> http://bikeradar.com/ads.txt
+2019/10/14 00:09:01
+Content type for https://autoguide.com/ads.txt = text/html; charset=UTF-8
+2019/10/14 00:09:02
+www.ephotozine.com ->> http://ephotozine.com/ads.txt
+2019/10/14 00:09:02
+Content type for https://which.co.uk/ads.txt = text/html
+2019/10/14 00:09:03
+sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: timestamp check failed ->> http://embarrassingproblems.com/ads.txt
+2019/10/14 00:09:03
+Content type for https://buycraft.net/ads.txt = text/html; charset=UTF-8

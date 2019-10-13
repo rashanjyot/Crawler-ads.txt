@@ -64,12 +64,12 @@ public class Logger {
 
     }
 
-    public static synchronized void successLog(int serial, String domain, int recordCount)
+    public static synchronized void successLog(String domain, int recordCount)
     {
         try
         {
             PrintWriter printWriter = getPrintWriter("res/successLog.txt");
-            printWriter.println(String.valueOf(serial)+". Domain: "+ domain + " | " + "Records saved: " + recordCount);
+            printWriter.println(". Domain: "+ domain + " | " + "Records saved: " + recordCount);
             printWriter.close();
         }
         catch (Exception e)
@@ -78,12 +78,12 @@ public class Logger {
         }
     }
 
-    public static synchronized void failureLog(int serial, String domain)
+    public static synchronized void failureLog(String domain)
     {
         try
         {
             PrintWriter printWriter = getPrintWriter("res/failureLog.txt");
-            printWriter.println(String.valueOf(serial)+". Domain: "+ domain);
+            printWriter.println(". Domain: "+ domain);
             printWriter.close();
         }
         catch (Exception e)
@@ -111,4 +111,19 @@ public class Logger {
             e.printStackTrace();
         }
     }
+
+    public static synchronized void inOutLog(String data)
+    {
+        try
+        {
+            PrintWriter printWriter2 = getPrintWriter("src/temp/inOutLog.txt");
+            printWriter2.println(data);
+            printWriter2.close();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
 }
