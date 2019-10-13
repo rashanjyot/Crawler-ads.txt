@@ -10,13 +10,11 @@ import java.util.concurrent.TimeUnit;
 import static main.Setup.DOMAIN_LIST_FILE;
 
 public class Crawler {
-
     private static ExecutorService pool;
 
     public static void main(String args[])
     {
-        pool = Executors.newFixedThreadPool(150);
-
+        pool = Executors.newFixedThreadPool(50);
 
         BufferedReader reader;
         try {

@@ -46,8 +46,8 @@ CREATE TABLE website(<br>
 <br>
 CREATE TABLE advertiser(<br>
     advertiser_id SERIAL PRIMARY KEY,<br>
-    name varchar(100) UNIQUE NOT NULL,<br>
-    tag varchar(100)  //I think this should be unique too, but wasn't sure of the same!<br>
+    name varchar(100) UNIQUE NOT NULL<br>
+    //removing tagid as of now<br>
 );<br>
 <br>
 CREATE TABLE publisher(<br>

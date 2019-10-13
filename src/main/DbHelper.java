@@ -22,37 +22,32 @@ public class DbHelper {
         c = setupConnection();
     }
 
-    public synchronized static void incrementSuccess()
+    public synchronized static void incrementSuccessCount()
     {
         successCount++;
     }
 
-    public synchronized static void incrementFailure()
+    public synchronized static void incrementFailureCount()
     {
         failureCount++;
-    }
-
-    public synchronized static void printError(Exception e, String domain)
-    {
-        System.err.println(domain);
-        e.printStackTrace();
     }
 
     public synchronized void save(String domain, ArrayList<String[]> recordList)
     {
         try
         {
+            if(recordList==null) throw new RuntimeException("Recordlist is null");
+
             Integer websiteId = saveAndFetchDomainId(c, domain);
             HashMap<String, Integer> advertiserNameIdMap = saveAndFetchAdvertiserIds(c, recordList);
             saveRecords(c, websiteId, advertiserNameIdMap, recordList);
-            incrementSuccess();
+            incrementSuccessCount();
             Logger.successLog(domain, recordList.size());
             System.out.println("Saved for: " + domain);
         }
         catch (Exception e)
         {
-            printError(e, domain);
-            incrementFailure();
+            incrementFailureCount();
             Logger.failureLog(domain);
             System.out.println("Couldn't save for: " + domain);
         }
@@ -75,7 +70,6 @@ public class DbHelper {
 
     private synchronized int saveAndFetchDomainId(Connection c, @NotNull String domain) throws Exception
     {
-        Logger.inOutLog("IN: "+Thread.currentThread().getName());
         Statement stmt = null;
         try
         {
@@ -99,7 +93,6 @@ public class DbHelper {
                 rs.next();
                 websiteId = rs.getInt("website_id");
             }
-            Logger.inOutLog("OUT: "+Thread.currentThread().getName());
             rs.close();
             stmt.close();
             return websiteId;
@@ -126,14 +119,6 @@ public class DbHelper {
             {
                 insertValues += "('" + record[0] + "'";
                 queryValues += "'" + record[0] + "'";
-                if (record.length==4)
-                {
-                    insertValues += ",'" + record[3] + "'";
-                }
-                else
-                {
-                    insertValues += ",null";
-                }
                 insertValues += "),";
                 queryValues += ",";
             }
@@ -141,7 +126,7 @@ public class DbHelper {
             queryValues = queryValues.substring(0, queryValues.length() - 1);
 
             stmt = c.createStatement();
-            stmt.execute("INSERT INTO advertiser (name, tag) VALUES " + insertValues +"  on conflict (name) do nothing;");
+            stmt.execute("INSERT INTO advertiser (name) VALUES " + insertValues +"  on conflict (name) do nothing;");
 
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery("Select advertiser_id, name from advertiser where name IN (" + queryValues + " );");

@@ -112,18 +112,4 @@ public class Logger {
         }
     }
 
-    public static synchronized void inOutLog(String data)
-    {
-        try
-        {
-            PrintWriter printWriter2 = getPrintWriter("src/temp/inOutLog.txt");
-            printWriter2.println(data);
-            printWriter2.close();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
-
 }

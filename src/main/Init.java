@@ -19,7 +19,7 @@ public class Init {
                 Statement s = connection.createStatement();
                 s.execute("CREATE TABLE website(website_id SERIAL PRIMARY KEY,name varchar(100) UNIQUE NOT NULL,last_crawled_at timestamp);");
 
-                s.execute("CREATE TABLE advertiser(advertiser_id SERIAL PRIMARY KEY,name varchar(100) UNIQUE NOT NULL,tag varchar(100));");
+                s.execute("CREATE TABLE advertiser(advertiser_id SERIAL PRIMARY KEY,name varchar(100) UNIQUE NOT NULL);");
 
                 s.execute("CREATE TABLE publisher(publisher_id SERIAL PRIMARY KEY," +
                         " website_id INTEGER NOT NULL REFERENCES website(website_id) ON DELETE CASCADE," +
