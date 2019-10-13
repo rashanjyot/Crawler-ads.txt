@@ -153,52 +153,28 @@ public class DbHelper {
             }
             c.setAutoCommit(false);
 
-            String insertValues = "";
-            for(Integer advertiserId: advertiserNameIdMap.values())
-            {
-                insertValues += "(" + websiteId + "," + advertiserId + "),";
-            }
-            insertValues = insertValues.substring(0, insertValues.length() - 1);
 
             /**
              * TRANSACTION
-             * 0. delete where website_id matches (this also deletes from publisher [cascaded])
-             * 1. save to website_advertiser_relation
+             * 1. delete from publisher where website_id matches
              * 2. save to publisher
              * 3. update last_crawled_at of website
              */
 
-            Statement deleteWebsiteAdvertiserRelation = c.createStatement();
-            deleteWebsiteAdvertiserRelation.execute("Delete from website_advertiser_relation where website_id=" + websiteId + "");
-            deleteWebsiteAdvertiserRelation.close();
+            Statement deletePublisherForWebsite = c.createStatement();
+            deletePublisherForWebsite.execute("Delete from publisher where website_id=" + websiteId + "");
+            deletePublisherForWebsite.close();
 
-            Statement insertToWebsiteAdvertiserRelation = c.createStatement();
-            insertToWebsiteAdvertiserRelation.execute("INSERT INTO website_advertiser_relation (website_id, advertiser_id) VALUES " + insertValues + " returning website_advertiser_relation_id, advertiser_id;");
-
-            ResultSet insertionResultSet = insertToWebsiteAdvertiserRelation.getResultSet();
-            HashMap<Integer, Integer> advertiserIdRelationMap = new HashMap<>();
-            while(insertionResultSet.next())
-            {
-                int websiteAdvertiserRelationId = insertionResultSet.getInt("website_advertiser_relation_id");
-                int advertiserId = insertionResultSet.getInt("advertiser_id");
-                advertiserIdRelationMap.put(advertiserId, websiteAdvertiserRelationId);
-                // website id is the same only no need to fetch it
-            }
-            insertionResultSet.close();
-            insertToWebsiteAdvertiserRelation.close();
-
-            insertValues = "";
+            String insertValues = "";
             for(String[] record: recordList)
             {
                 int advId = advertiserNameIdMap.get(record[0]);
-                int relationId = advertiserIdRelationMap.get(advId);
-
-                insertValues += "(" + relationId + ",'" + record[1] + "','" + record[2] + "'),";
+                insertValues += "(" + websiteId + "," + advId + ",'" + record[1] + "','" + record[2] + "'),";
             }
             insertValues = insertValues.substring(0, insertValues.length() - 1);
 
             Statement saveToPublisher = c.createStatement();
-            saveToPublisher.execute("INSERT INTO publisher (website_advertiser_relation_id, account_id, account_type) " + "VALUES " + insertValues + " on conflict (website_advertiser_relation_id, account_id) do nothing;");
+            saveToPublisher.execute("INSERT INTO publisher (website_id, advertiser_id, account_id, account_type) " + "VALUES " + insertValues + " on conflict (website_id, advertiser_id, account_id) do nothing;");
             saveToPublisher.close();
 
             Statement updateLastCrawledAt = c.createStatement();
