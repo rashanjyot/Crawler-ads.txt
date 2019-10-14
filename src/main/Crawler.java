@@ -14,7 +14,7 @@ public class Crawler {
 
     public static void main(String args[])
     {
-        pool = Executors.newFixedThreadPool(50);
+        pool = Executors.newFixedThreadPool(100);
 
         BufferedReader reader;
         try {

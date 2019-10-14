@@ -18,10 +18,12 @@ public class HttpCrawlRequests {
             if(recordList != null)
             {
                 System.out.println(domain + " count: "+ recordList.size());
+                Logger.logg(domain + " count: "+ recordList.size());
             }
             else
             {
                 System.out.println(domain + " count: 0");
+                Logger.logg(domain + " count: 0");
             }
             return recordList;
         }
@@ -38,6 +40,7 @@ public class HttpCrawlRequests {
         {
             HttpURLConnection con = setupConnection(url);
             System.out.println("\nURL : " + url + " Response Code : "+ con.getResponseCode());
+            Logger.logg("\nURL : " + url + " Response Code : "+ con.getResponseCode());
             int responseCode = con.getResponseCode();
 
             if(responseCode >=300 && responseCode < 400 )
@@ -87,7 +90,7 @@ public class HttpCrawlRequests {
         if(rootDomain.equals(redirectRootDomain) || hopCount++==0)
         {
             HttpURLConnection connection = setupConnection(redirectUrl);
-
+            Logger.logg("\nURL : " + redirectUrl + " Response Code : "+ connection.getResponseCode());
             System.out.println("\nURL : " + redirectUrl + " Response Code : "+ connection.getResponseCode());
             int responseCode = connection.getResponseCode();
 

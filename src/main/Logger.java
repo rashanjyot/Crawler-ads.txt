@@ -10,6 +10,8 @@ import java.time.format.DateTimeFormatter;
 
 public class Logger {
 
+    static final PrintWriter mainPrint = getPrintWriter("res/printlog2.txt");
+
     public static PrintWriter getPrintWriter(String fileName)
     {
         try
@@ -40,6 +42,19 @@ public class Logger {
             logDate(printWriter);
             printWriter.println(content);
             printWriter.close();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void logg(String content)
+    {
+        try
+        {
+            mainPrint.println(content);
         }
         catch (Exception e)
         {

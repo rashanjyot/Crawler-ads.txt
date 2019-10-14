@@ -41,12 +41,15 @@ public class DbHelper {
             incrementSuccessCount();
             Logger.successLog(domain, recordList.size());
             System.out.println("Saved for: " + domain);
+            Logger.logg("Saved for: " + domain);
+
         }
         catch (Exception e)
         {
             incrementFailureCount();
             Logger.failureLog(domain);
             System.out.println("Couldn't save for: " + domain);
+            Logger.logg("Couldn't save for: " + domain);
         }
     }
 
