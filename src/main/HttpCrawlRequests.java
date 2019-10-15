@@ -45,7 +45,7 @@ public class HttpCrawlRequests {
 
             if(responseCode >=300 && responseCode < 400 )
             {
-                con = handleRedirects(url, con, 0);
+                con = handleRedirects(url, con, 0, 0);
                 responseCode = con.getResponseCode();
             }
 
@@ -81,8 +81,9 @@ public class HttpCrawlRequests {
         }
     }
 
-    private synchronized HttpURLConnection handleRedirects(String url, HttpURLConnection con, int hopCount) throws Exception
+    private synchronized HttpURLConnection handleRedirects(String url, HttpURLConnection con, int hopCount, int totalCount) throws Exception
     {
+        if (totalCount++==20) { throw new RuntimeException("Too many redirects"); }
         String rootDomain =  getRootDomainFromUrl(url);
         String redirectUrl = con.getHeaderField("Location");
         String redirectRootDomain = getRootDomainFromUrl(redirectUrl);
@@ -90,6 +91,7 @@ public class HttpCrawlRequests {
         if(rootDomain.equals(redirectRootDomain) || hopCount++==0)
         {
             HttpURLConnection connection = setupConnection(redirectUrl);
+            if(totalCount>5) { connection.setConnectTimeout(3000); }
             Logger.logg("\nURL : " + redirectUrl + " Response Code : "+ connection.getResponseCode());
             System.out.println("\nURL : " + redirectUrl + " Response Code : "+ connection.getResponseCode());
             int responseCode = connection.getResponseCode();
@@ -100,7 +102,7 @@ public class HttpCrawlRequests {
             }
             else if (responseCode >= 300 && responseCode < 400)
             {
-                return handleRedirects(connection.getHeaderField("Location"), connection, hopCount);
+                return handleRedirects(connection.getHeaderField("Location"), connection, hopCount, totalCount);
             }
             return connection;
         }
@@ -119,7 +121,7 @@ public class HttpCrawlRequests {
         connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) " +
                 "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36");
         connection.setRequestProperty("Upgrade-Insecure-Requests", "1");
-        connection.setConnectTimeout(15000);
+        connection.setConnectTimeout(10000);
         return connection;
     }
 
