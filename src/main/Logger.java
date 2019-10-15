@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Logger {
 
-    static final PrintWriter mainPrint = getPrintWriter("res/printlog2.txt");
+    static final PrintWriter mainPrint = getPrintWriter("res/console.txt");
 
     public static PrintWriter getPrintWriter(String fileName)
     {
